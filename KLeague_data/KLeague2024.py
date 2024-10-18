@@ -18,7 +18,7 @@ import pickle
 # In[5]:
 
 
-# with open ('shot_data.pickle', 'wb') as f:
+# with open ('KLeague_data/shot_data.pickle', 'wb') as f:
 #     pickle.dump(temp_data,f)
 
 
