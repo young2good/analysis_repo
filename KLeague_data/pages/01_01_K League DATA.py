@@ -1,5 +1,6 @@
 import streamlit as st
 import KLeague2024 as KLeague2024
+import pass_dribble
 
 
 # Streamlit title
@@ -74,7 +75,10 @@ st.title('K리그 데이터 시각화')
 tab2023, tab2024 = st.tabs([':soccer:2023 SEASON', ':soccer:2024 SEASON'])
 
 with tab2023:
-    st.write('gtt')
+    st.header('2023: SEASON')
+    st.subheader('플레이 스타일 by Team')
+    st.altair_chart(pass_dribble.tot_chart)
+    st.write('need a comment')
 
 with tab2024:
     st.header('2024 SEASON: 인천 유나이티드')
