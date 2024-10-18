@@ -230,8 +230,10 @@ tot_shot_chart
 
 # In[9]:
 
+pickle_file_path2 = os.path.join(script_dir, 'pass_data.pickle')
+temp_pass_data = pd.read_pickle(pickle_file_path2)
 
-temp_pass_data = pd.read_pickle('pass_data.pickle')
+# temp_pass_data = pd.read_pickle('pass_data.pickle')
 temp_pass_data
 
 
