@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[1]:
 
 
 import pandas as pd
@@ -15,8 +15,8 @@ import pickle
 # temp_data = pd.read_clipboard()
 
 
-
 # In[5]:
+
 
 # with open ('shot_data.pickle', 'wb') as f:
 #     pickle.dump(temp_data,f)
@@ -373,7 +373,7 @@ tot_chart = alt.layer(
     bad_text
 )
 
-tot_chart = tot_chart.properties(
+tot_chart.properties(
     height = 600,
     width = 800,
     background = '#2F2F2F',
