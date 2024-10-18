@@ -7,6 +7,7 @@
 import pandas as pd
 import altair as alt
 import pickle
+import os
 
 
 # In[2]:
@@ -25,7 +26,12 @@ import pickle
 # In[6]:
 
 
-temp_data = pd.read_pickle('shot_data.pickle')
+# temp_data = pd.read_pickle('shot_data.pickle')
+script_dir = os.path.dirname(__file__)
+
+# pickle 파일의 경로를 명시적으로 지정합니다.
+pickle_file_path = os.path.join(script_dir, 'shot_data.pickle')
+temp_data = pd.read_pickle(pickle_file_path)
 
 
 # In[106]:
