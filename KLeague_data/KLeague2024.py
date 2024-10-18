@@ -26,6 +26,8 @@ import pickle
 
 
 temp_data = pd.read_pickle('shot_data.pickle')
+with open("data.pickle","rb") as f:
+    temp_data = pickle.load(f)
 
 
 # In[106]:
