@@ -26,12 +26,18 @@ import os
 # In[6]:
 
 
+<<<<<<< HEAD
 # temp_data = pd.read_pickle('shot_data.pickle')
 script_dir = os.path.dirname(__file__)
 
 # pickle 파일의 경로를 명시적으로 지정합니다.
 pickle_file_path = os.path.join(script_dir, 'shot_data.pickle')
 temp_data = pd.read_pickle(pickle_file_path)
+=======
+temp_data = pd.read_pickle('shot_data.pickle')
+# with open("shot_data.pickle","rb") as f:
+#     temp_data = pickle.load(f)
+>>>>>>> 6f5bc30b0d6c55278a6913ba70473cdce31edf8c
 
 
 # In[106]:
