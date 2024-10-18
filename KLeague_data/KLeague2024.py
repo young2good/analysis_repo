@@ -25,7 +25,7 @@ import pickle
 # In[6]:
 
 
-temp_data = pd.read_pickle('../shot_data.pickle')
+temp_data = pd.read_pickle('shot_data.pickle')
 # with open("shot_data.pickle","rb") as f:
 #     temp_data = pickle.load(f)
 
