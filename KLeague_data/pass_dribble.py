@@ -8,7 +8,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 import pickle
-
+import os
 
 # In[15]:
 
@@ -26,8 +26,14 @@ import pickle
 
 # In[17]:
 
+script_dir = os.path.dirname(__file__)
 
-temp_df = pd.read_pickle('pass_dribble_2023.pickle')
+# pickle 파일의 경로를 명시적으로 지정합니다.
+pickle_file_path = os.path.join(script_dir, 'pass_dribble_2023.pickle')
+temp_data = pd.read_pickle(pickle_file_path)
+
+
+# temp_df = pd.read_pickle('pass_dribble_2023.pickle')
 
 
 # In[18]:
