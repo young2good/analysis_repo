@@ -1,0 +1,13 @@
+---
+title: "내 문서 제목"
+author: "내 이름"
+date: "`r Sys.Date()`"
+format: html
+---
+
+# 첫 번째 섹션
+
+이곳에 문서 내용을 추가합니다.
+
+```{r}
+summary(cars)
