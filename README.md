@@ -1,1 +1,3 @@
-# This is about my personal project
+# README
+
+This is the place where my personal project placed😉
