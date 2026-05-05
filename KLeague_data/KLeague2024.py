@@ -387,7 +387,7 @@ tot_chart = alt.layer(
     bad_text
 )
 
-tot_chart.properties(
+tot_chart = tot_chart.properties(
     height = 600,
     width = 800,
     background = '#2F2F2F',
