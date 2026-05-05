@@ -14,7 +14,7 @@ players = [
 ]
 
 # --------------------------
-# 1페이지: 선택 화면
+# 1페이지 (선택 화면)
 # --------------------------
 frame_select = tk.Frame(root)
 frame_select.pack(fill="both", expand=True)
@@ -28,38 +28,52 @@ for player in players:
     tk.Checkbutton(frame_select, text=player, variable=var).pack(anchor="w")
     check_vars.append((player, var))
 
-# --------------------------
-# 2페이지: 평가 화면
-# --------------------------
-frame_rate = tk.Frame(root)
 
+# --------------------------
+# 평가 페이지 생성 함수
+# --------------------------
+frame_rate = None
 rating_vars = {}
 
-def go_to_rate():
-    selected = [p for p, var in check_vars if var.get()]
-    
-    if not selected:
-        messagebox.showwarning("경고", "최소 1명 선택하세요")
-        return
-    
-    # 화면 전환
-    frame_select.pack_forget()
-    frame_rate.pack(fill="both", expand=True)
+def create_rate_page(selected_players):
+    global frame_rate, rating_vars
+
+    frame_rate = tk.Frame(root)
+    rating_vars = {}
 
     tk.Label(frame_rate, text="선수 평가 (1~5점)", font=("Arial", 14)).pack(pady=10)
 
-    for player in selected:
-        frame = tk.Frame(frame_rate)
-        frame.pack(anchor="w", pady=5)
+    for player in selected_players:
+        row = tk.Frame(frame_rate)
+        row.pack(anchor="w", pady=5)
 
-        tk.Label(frame, text=player, width=18).pack(side="left")
+        tk.Label(row, text=player, width=18).pack(side="left")
 
         var = tk.StringVar()
         rating_vars[player] = var
 
-        combo = ttk.Combobox(frame, textvariable=var, values=[1, 2, 3, 4, 5], width=5)
+        combo = ttk.Combobox(row, textvariable=var, values=[1, 2, 3, 4, 5], width=5)
         combo.pack(side="left")
         combo.set("선택")
+
+    tk.Button(frame_rate, text="제출", command=submit).pack(pady=20)
+
+
+# --------------------------
+# 2페이지 이동
+# --------------------------
+def go_to_rate():
+    selected = [p for p, var in check_vars if var.get()]
+
+    if not selected:
+        messagebox.showwarning("경고", "최소 1명 선택하세요")
+        return
+
+    frame_select.pack_forget()
+
+    create_rate_page(selected)
+    frame_rate.pack(fill="both", expand=True)
+
 
 # --------------------------
 # 제출
@@ -74,11 +88,26 @@ def submit():
             return
         results[player] = int(value)
 
-    result_text = "\n".join([f"{p}: {s}점" for p, s in results.items()])
-    messagebox.showinfo("결과", result_text)
+    messagebox.showinfo(
+        "결과",
+        "\n".join([f"{p}: {s}점" for p, s in results.items()])
+    )
 
+    # 2페이지 종료
+    frame_rate.pack_forget()
+
+    # 체크 초기화
+    for _, var in check_vars:
+        var.set(False)
+
+    # 1페이지 복귀
+    frame_select.pack(fill="both", expand=True)
+
+
+# --------------------------
 # 버튼
+# --------------------------
 tk.Button(frame_select, text="다음", command=go_to_rate).pack(pady=10)
-tk.Button(frame_rate, text="제출", command=submit).pack(pady=20)
 
+# 실행
 root.mainloop()
