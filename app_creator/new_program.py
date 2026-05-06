@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
+from tkcalendar import DateEntry
+import json
+import os
 
 root = tk.Tk()
 root.title("축구선수 평가 프로그램")
@@ -20,6 +23,19 @@ frame_select = tk.Frame(root)
 frame_select.pack(fill="both", expand=True)
 
 check_vars = []
+
+tk.Label(frame_select, text="경기 날짜 선택", font=("Arial", 12)).pack(pady=5)
+
+date_entry = DateEntry(
+    frame_select,
+    width=12,
+    background='darkblue',
+    foreground='white',
+    borderwidth=2,
+    date_pattern='yyyy-mm-dd'
+)
+
+date_entry.pack(pady=5)
 
 tk.Label(frame_select, text="평가할 선수 선택", font=("Arial", 14)).pack(pady=10)
 
@@ -54,7 +70,7 @@ def create_rate_page(selected_players):
 
         combo = ttk.Combobox(row, textvariable=var, values=[1, 2, 3, 4, 5], width=5)
         combo.pack(side="left")
-        combo.set("선택")
+        combo.set("3")
 
     tk.Button(frame_rate, text="제출", command=submit).pack(pady=20)
 
@@ -83,14 +99,28 @@ def submit():
 
     for player, var in rating_vars.items():
         value = var.get()
+
         if value not in ["1", "2", "3", "4", "5"]:
             messagebox.showwarning("경고", f"{player} 점수 선택 안됨")
             return
+
         results[player] = int(value)
 
+    # 오늘 날짜 파일명
+    selected_date = date_entry.get()
+
+    # data 폴더 없으면 생성
+    os.makedirs("data", exist_ok=True)
+
+    file_name = f"data/{selected_date}.json"
+
+    # JSON 저장
+    with open(file_name, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=4)
+
     messagebox.showinfo(
-        "결과",
-        "\n".join([f"{p}: {s}점" for p, s in results.items()])
+        "결과 저장 완료",
+        f"{file_name} 저장 완료"
     )
 
     # 2페이지 종료
