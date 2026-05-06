@@ -10,7 +10,7 @@ root.geometry("400x500")
 players = [
     "Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé",
     "Erling Haaland", "Neymar Jr", "Kevin De Bruyne",
-    "Mohamed Salah", "Harry Kane", "Vinícius Jr", "Jude Bellingham"
+    "Mohamed Salah", "Harry Kane", "Vinícius Jr", "Jude Bellingham", "Son"
 ]
 
 # --------------------------
