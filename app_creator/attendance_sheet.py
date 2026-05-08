@@ -6,7 +6,7 @@ import json
 import os
 
 root = tk.Tk()
-root.title("축구선수 평가 프로그램")
+root.title("출석부")
 root.geometry("400x500")
 
 # 축구선수 리스트
@@ -37,7 +37,7 @@ date_entry = DateEntry(
 
 date_entry.pack(pady=5)
 
-tk.Label(frame_select, text="평가할 선수 선택", font=("Arial", 14)).pack(pady=10)
+tk.Label(frame_select, text="참석한 선수 선택", font=("Arial", 14)).pack(pady=10)
 
 for player in players:
     var = tk.BooleanVar()
@@ -46,7 +46,7 @@ for player in players:
 
 
 # --------------------------
-# 평가 페이지 생성 함수
+# 선수 포지션 페이지 생성 함수
 # --------------------------
 frame_rate = None
 rating_vars = {}
@@ -57,7 +57,7 @@ def create_rate_page(selected_players):
     frame_rate = tk.Frame(root)
     rating_vars = {}
 
-    tk.Label(frame_rate, text="선수 평가 (1~5점)", font=("Arial", 14)).pack(pady=10)
+    tk.Label(frame_rate, text="선수 포지션 선택", font=("Arial", 14)).pack(pady=10)
 
     for player in selected_players:
         row = tk.Frame(frame_rate)
@@ -68,11 +68,12 @@ def create_rate_page(selected_players):
         var = tk.StringVar()
         rating_vars[player] = var
 
-        combo = ttk.Combobox(row, textvariable=var, values=[1, 2, 3, 4, 5], width=5)
+        combo = ttk.Combobox(row, textvariable=var, values=['FW','MF', 'DF', 'GK'], width=5)
         combo.pack(side="left")
-        combo.set("3")
+        combo.set("MF")
 
     tk.Button(frame_rate, text="제출", command=submit).pack(pady=20)
+
 
 
 # --------------------------
@@ -100,11 +101,11 @@ def submit():
     for player, var in rating_vars.items():
         value = var.get()
 
-        if value not in ["1", "2", "3", "4", "5"]:
-            messagebox.showwarning("경고", f"{player} 점수 선택 안됨")
+        if value not in ["FW", "MF", "DF", "GK"]:
+            messagebox.showwarning("경고", f"{player} 포지션 선택 안됨")
             return
 
-        results[player] = int(value)
+        results[player] = value
 
     # 오늘 날짜 파일명
     selected_date = date_entry.get()
