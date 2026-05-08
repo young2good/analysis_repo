@@ -109,10 +109,18 @@ def submit():
     # 오늘 날짜 파일명
     selected_date = date_entry.get()
 
-    # data 폴더 없으면 생성
-    os.makedirs("data", exist_ok=True)
 
-    file_name = f"data/{selected_date}.json"
+    # 현재 py파일 기준 경로
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # data 폴더 경로
+    DATA_DIR = os.path.join(BASE_DIR, "data")
+
+    # data 폴더 생성
+    os.makedirs(DATA_DIR, exist_ok=True)
+
+    # 파일 경로
+    file_name = os.path.join(DATA_DIR, f"{selected_date}.json")
 
     # JSON 저장
     with open(file_name, "w", encoding="utf-8") as f:
@@ -141,3 +149,5 @@ tk.Button(frame_select, text="다음", command=go_to_rate).pack(pady=10)
 
 # 실행
 root.mainloop()
+
+print(file_name)

@@ -15,7 +15,8 @@ players = [
     "Harry Kane",
     "Vinícius Jr",
     "Jude Bellingham",
-    "Son"
+    "Son",
+    "JaeYoon"
 ]
 
 # 포지션 정렬 순서
@@ -61,7 +62,7 @@ elif st.session_state.page == "display":
     st.title(f"📅 {selected_date} 포지션")
 
     # JSON 파일 경로
-    data_file = f"data/{selected_date}.json"
+    data_file = f"app_creator/data/{selected_date}.json"
 
     # JSON 읽기
     if os.path.exists(data_file):
@@ -85,7 +86,8 @@ elif st.session_state.page == "display":
 
             active_players.append({
                 "name": player,
-                "position": ratings[player]
+                "quarter_1": ratings[player]["quarter_1"],
+                "quarter_2": ratings[player]["quarter_2"]
             })
 
         # 비활성 선수
@@ -97,7 +99,7 @@ elif st.session_state.page == "display":
     # FW → MF → DF → GK
     # -----------------------------
     active_players.sort(
-        key=lambda x: position_order.get(x["position"], 99)
+        key=lambda x: position_order.get(x["quarter_1"], 99)
     )
 
     # -----------------------------
@@ -106,7 +108,8 @@ elif st.session_state.page == "display":
     for player_info in active_players:
 
         player = player_info["name"]
-        position = player_info["position"]
+        quarter_1 = player_info["quarter_1"]
+        quarter_2 = player_info["quarter_2"]
 
         st.markdown(
             f"""
@@ -119,7 +122,9 @@ elif st.session_state.page == "display":
                 font-size:18px;
             ">
                 ✅ <b>{player}</b>
-                <span style="float:right;">{position}</span>
+                <span style="float:right;">
+                    1Q: {quarter_1} | 2Q: {quarter_2}
+                </span>
             </div>
             """,
             unsafe_allow_html=True

@@ -13,7 +13,7 @@ root.geometry("400x500")
 players = [
     "Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé",
     "Erling Haaland", "Neymar Jr", "Kevin De Bruyne",
-    "Mohamed Salah", "Harry Kane", "Vinícius Jr", "Jude Bellingham", "Son"
+    "Mohamed Salah", "Harry Kane", "Vinícius Jr", "Jude Bellingham", "Son", "JaeYoon"
 ]
 
 # --------------------------
@@ -60,17 +60,48 @@ def create_rate_page(selected_players):
     tk.Label(frame_rate, text="선수 포지션 선택", font=("Arial", 14)).pack(pady=10)
 
     for player in selected_players:
+
         row = tk.Frame(frame_rate)
         row.pack(anchor="w", pady=5)
 
+        # 선수 이름
         tk.Label(row, text=player, width=18).pack(side="left")
 
-        var = tk.StringVar()
-        rating_vars[player] = var
+        # 1쿼터
+        quarter1_var = tk.StringVar()
 
-        combo = ttk.Combobox(row, textvariable=var, values=['FW','MF', 'DF', 'GK'], width=5)
-        combo.pack(side="left")
-        combo.set("MF")
+        tk.Label(row, text="1Q").pack(side="left")
+
+        quarter1_combo = ttk.Combobox(
+            row,
+            textvariable=quarter1_var,
+            values=['FW', 'MF', 'DF', 'GK', 'Sub'],
+            width=5
+        )
+
+        quarter1_combo.pack(side="left", padx=5)
+        quarter1_combo.set("MF")
+
+        # 2쿼터
+        quarter2_var = tk.StringVar()
+
+        tk.Label(row, text="2Q").pack(side="left")
+
+        quarter2_combo = ttk.Combobox(
+            row,
+            textvariable=quarter2_var,
+            values=['FW', 'MF', 'DF', 'GK', 'Sub'],
+            width=5
+        )
+
+        quarter2_combo.pack(side="left", padx=5)
+        quarter2_combo.set("Sub")
+
+        # 저장
+        rating_vars[player] = {
+            "quarter_1": quarter1_var,
+            "quarter_2": quarter2_var
+        }
 
     tk.Button(frame_rate, text="제출", command=submit).pack(pady=20)
 
@@ -98,22 +129,40 @@ def go_to_rate():
 def submit():
     results = {}
 
-    for player, var in rating_vars.items():
-        value = var.get()
+    for player, positions in rating_vars.items():
 
-        if value not in ["FW", "MF", "DF", "GK"]:
-            messagebox.showwarning("경고", f"{player} 포지션 선택 안됨")
+        quarter1_value = positions["quarter_1"].get()
+        quarter2_value = positions["quarter_2"].get()
+
+        valid_positions = ["FW", "MF", "DF", "GK", "Sub"]
+
+        if quarter1_value not in valid_positions:
+            messagebox.showwarning("경고", f"{player} 1쿼터 포지션 선택 안됨")
             return
 
-        results[player] = value
+        if quarter2_value not in valid_positions:
+            messagebox.showwarning("경고", f"{player} 2쿼터 포지션 선택 안됨")
+            return
+
+        results[player] = {
+            "quarter_1": quarter1_value,
+            "quarter_2": quarter2_value
+        }
 
     # 오늘 날짜 파일명
     selected_date = date_entry.get()
 
-    # data 폴더 없으면 생성
-    os.makedirs("data", exist_ok=True)
+    # 현재 py파일 기준 경로
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    file_name = f"data/{selected_date}.json"
+    # data 폴더 경로
+    DATA_DIR = os.path.join(BASE_DIR, "data")
+
+    # data 폴더 생성
+    os.makedirs(DATA_DIR, exist_ok=True)
+
+    # 파일 경로
+    file_name = os.path.join(DATA_DIR, f"{selected_date}.json")
 
     # JSON 저장
     with open(file_name, "w", encoding="utf-8") as f:
