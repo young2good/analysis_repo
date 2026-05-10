@@ -61,8 +61,17 @@ elif st.session_state.page == "display":
 
     st.title(f"📅 {selected_date} 포지션")
 
+    # 현재 py파일 기준 경로
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # data 폴더 경로
+    DATA_DIR = os.path.join(BASE_DIR, "data")
+
     # JSON 파일 경로
-    data_file = f"app_creator/data/{selected_date}.json"
+    data_file = os.path.join(DATA_DIR, f"{selected_date}.json")
+
+    # # JSON 파일 경로
+    # data_file = f"app_creator/data/{selected_date}.json"
 
     # JSON 읽기
     if os.path.exists(data_file):
