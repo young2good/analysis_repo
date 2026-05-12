@@ -1,0 +1,58 @@
+{
+    "match_info": {
+        "date": "2026-05-13",
+        "time": "19:00",
+        "opponent": "FC 서울",
+        "location": "상암 월드컵 경기장"
+    },
+    "players": {
+        "Lionel Messi": {
+            "quarter_1": "FW",
+            "quarter_2": "DF"
+        },
+        "Cristiano Ronaldo": {
+            "quarter_1": "GK",
+            "quarter_2": "Sub"
+        },
+        "Kylian Mbappé": {
+            "quarter_1": "MF",
+            "quarter_2": "GK"
+        },
+        "Erling Haaland": {
+            "quarter_1": "MF",
+            "quarter_2": "Sub"
+        },
+        "Neymar Jr": {
+            "quarter_1": "GK",
+            "quarter_2": "GK"
+        },
+        "Kevin De Bruyne": {
+            "quarter_1": "Sub",
+            "quarter_2": "FW"
+        },
+        "Mohamed Salah": {
+            "quarter_1": "MF",
+            "quarter_2": "Sub"
+        },
+        "Harry Kane": {
+            "quarter_1": "MF",
+            "quarter_2": "Sub"
+        },
+        "Vinícius Jr": {
+            "quarter_1": "MF",
+            "quarter_2": "GK"
+        },
+        "Jude Bellingham": {
+            "quarter_1": "MF",
+            "quarter_2": "DF"
+        },
+        "Son": {
+            "quarter_1": "MF",
+            "quarter_2": "DF"
+        },
+        "JaeYoon": {
+            "quarter_1": "DF",
+            "quarter_2": "Sub"
+        }
+    }
+}

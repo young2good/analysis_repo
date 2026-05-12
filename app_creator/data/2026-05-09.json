@@ -1,0 +1,22 @@
+{
+    "Lionel Messi": {
+        "quarter_1": "FW",
+        "quarter_2": "Sub"
+    },
+    "Cristiano Ronaldo": {
+        "quarter_1": "MF",
+        "quarter_2": "Sub"
+    },
+    "Erling Haaland": {
+        "quarter_1": "MF",
+        "quarter_2": "MF"
+    },
+    "Son": {
+        "quarter_1": "Sub",
+        "quarter_2": "Sub"
+    },
+    "JaeYoon": {
+        "quarter_1": "GK",
+        "quarter_2": "Sub"
+    }
+}

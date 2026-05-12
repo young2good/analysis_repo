@@ -1,0 +1,18 @@
+{
+    "Cristiano Ronaldo": {
+        "quarter_1": "FW",
+        "quarter_2": "Sub"
+    },
+    "Kylian Mbappé": {
+        "quarter_1": "MF",
+        "quarter_2": "Sub"
+    },
+    "Neymar Jr": {
+        "quarter_1": "MF",
+        "quarter_2": "Sub"
+    },
+    "Kevin De Bruyne": {
+        "quarter_1": "Sub",
+        "quarter_2": "Sub"
+    }
+}
