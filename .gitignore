@@ -3,3 +3,4 @@ __pycache__/
 app_creator/my_env/
 app_creator/__pycache__/
 *.pyc
+app_creator/myenv/
