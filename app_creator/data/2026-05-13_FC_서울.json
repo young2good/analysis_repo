@@ -7,51 +7,27 @@
     },
     "players": {
         "Lionel Messi": {
-            "quarter_1": "FW",
-            "quarter_2": "DF"
+            "quarter_1": "MF",
+            "quarter_2": "Sub"
         },
         "Cristiano Ronaldo": {
-            "quarter_1": "GK",
+            "quarter_1": "MF",
             "quarter_2": "Sub"
         },
         "Kylian Mbappé": {
             "quarter_1": "MF",
-            "quarter_2": "GK"
+            "quarter_2": "Sub"
         },
         "Erling Haaland": {
             "quarter_1": "MF",
             "quarter_2": "Sub"
         },
         "Neymar Jr": {
-            "quarter_1": "GK",
-            "quarter_2": "GK"
+            "quarter_1": "MF",
+            "quarter_2": "Sub"
         },
         "Kevin De Bruyne": {
-            "quarter_1": "Sub",
-            "quarter_2": "FW"
-        },
-        "Mohamed Salah": {
             "quarter_1": "MF",
-            "quarter_2": "Sub"
-        },
-        "Harry Kane": {
-            "quarter_1": "MF",
-            "quarter_2": "Sub"
-        },
-        "Vinícius Jr": {
-            "quarter_1": "MF",
-            "quarter_2": "GK"
-        },
-        "Jude Bellingham": {
-            "quarter_1": "MF",
-            "quarter_2": "DF"
-        },
-        "Son": {
-            "quarter_1": "MF",
-            "quarter_2": "DF"
-        },
-        "JaeYoon": {
-            "quarter_1": "DF",
             "quarter_2": "Sub"
         }
     }

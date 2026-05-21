@@ -1,0 +1,26 @@
+{
+    "match_info": {
+        "date": "2026-05-14",
+        "time": "19:00",
+        "opponent": "",
+        "location": ""
+    },
+    "players": {
+        "Lionel Messi": {
+            "quarter_1": "FW",
+            "quarter_2": "MF"
+        },
+        "Kylian Mbappé": {
+            "quarter_1": "DF",
+            "quarter_2": "DF"
+        },
+        "Erling Haaland": {
+            "quarter_1": "GK",
+            "quarter_2": "GK"
+        },
+        "Kevin De Bruyne": {
+            "quarter_1": "MF",
+            "quarter_2": "FW"
+        }
+    }
+}
