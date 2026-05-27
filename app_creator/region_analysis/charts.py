@@ -6,7 +6,7 @@ def sido_bar_chart(df: pd.DataFrame) -> alt.Chart:
     sido_counts = df["sido"].value_counts().reset_index()
     sido_counts.columns = ["sido", "count"]
 
-    return alt.Chart(sido_counts).mark_bar().encode(
+    return alt.Chart(sido_counts).mark_bar(color="hotpink").encode(
         x=alt.X("count:Q", title="게시글 수"),
         y=alt.Y("sido:N", sort="-x", title="시도"),
         tooltip=["sido", "count"]
@@ -21,7 +21,7 @@ def sigungu_bar_chart(df: pd.DataFrame) -> alt.Chart:
     sigungu_counts = df["sigungu"].value_counts().reset_index()
     sigungu_counts.columns = ["sigungu", "count"]
 
-    return alt.Chart(sigungu_counts).mark_bar().encode(
+    return alt.Chart(sigungu_counts).mark_bar(color="hotpink").encode(
         x=alt.X("count:Q", title="게시글 수"),
         y=alt.Y("sigungu:N", sort="-x", title="시군구"),
         tooltip=["sigungu", "count"]
@@ -40,7 +40,7 @@ def interactive_sido_sigungu_chart(df: pd.DataFrame) -> alt.HConcatChart:
     sido_chart = base.mark_bar().encode(
         x=alt.X("count():Q", title="게시글 수"),
         y=alt.Y("sido:N", sort="-x", title="시도"),
-        color=alt.condition(selection, alt.value("steelblue"), alt.value("lightgray")),
+        color=alt.condition(selection, alt.value("hotpink"), alt.value("lightgray")),
         tooltip=["sido:N", "count():Q"]
     ).properties(
         title="시도별 게시글 수",
@@ -48,7 +48,7 @@ def interactive_sido_sigungu_chart(df: pd.DataFrame) -> alt.HConcatChart:
         height=400
     ).add_params(selection)
 
-    sigungu_chart = base.mark_bar().encode(
+    sigungu_chart = base.mark_bar(color="hotpink").encode(
         x=alt.X("count():Q", title="게시글 수"),
         y=alt.Y("sigungu:N", sort="-x", title="시군구"),
         tooltip=["sigungu:N", "count():Q"]
