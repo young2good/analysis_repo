@@ -63,4 +63,19 @@ def interactive_sido_sigungu_chart(df: pd.DataFrame) -> alt.HConcatChart:
     return (sido_chart | sigungu_chart)
 
 
+def sido_pie_chart(df: pd.DataFrame) -> alt.Chart:
+    sido_counts = df["sido"].value_counts().reset_index()
+    sido_counts.columns = ["sido", "count"]
+
+    return alt.Chart(sido_counts).mark_arc().encode(
+        theta=alt.Theta("count:Q"),
+        color=alt.Color("sido:N", title="시도"),
+        tooltip=["sido:N", "count:Q"]
+    ).properties(
+        title="시도별 게시글 비율",
+        width=400,
+        height=400
+    )
+
+
 AXIS_CONFIG = dict(domain=False, ticks=False, grid=False)
