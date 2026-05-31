@@ -2,6 +2,7 @@ import json
 import re
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
 POSTS_JSON = Path(__file__).parent / "posts.json"
 CAFE_URL   = "https://cafe.daum.net/skfootball/IxVG/"
