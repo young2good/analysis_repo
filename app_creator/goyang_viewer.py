@@ -3,7 +3,7 @@ import re
 import pandas as pd
 import streamlit as st
 
-POSTS_JSON = r"e:\git-younghyun\analysis_repo\app_creator\posts.json"
+POSTS_JSON = Path(__file__).parent / "posts.json"
 CAFE_URL   = "https://cafe.daum.net/skfootball/IxVG/"
 
 
