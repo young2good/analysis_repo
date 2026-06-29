@@ -47,61 +47,61 @@ def extract_time(title: str) -> str:
         return f"{m.group(1)}시"
     return ""
 
-
+## 지도부분 일단 hide (6/30)
 # ── 지도 ────────────────────────────────────────
-@st.cache_resource(show_spinner="지도 데이터 로딩 중...")
-def load_sudogwon_fc():
-    """수도권 GeoJSON FeatureCollection 반환 (필터 + highlight 속성 추가)"""
-    SIDO_CODE = {"11": "서울", "23": "인천", "31": "경기"}
-    EXCLUDE   = {"옹진군", "강화군"}
-    geojson   = requests.get(GEOJSON_URL, timeout=15).json()
+# @st.cache_resource(show_spinner="지도 데이터 로딩 중...")
+# def load_sudogwon_fc():
+#     """수도권 GeoJSON FeatureCollection 반환 (필터 + highlight 속성 추가)"""
+#     SIDO_CODE = {"11": "서울", "23": "인천", "31": "경기"}
+#     EXCLUDE   = {"옹진군", "강화군"}
+#     geojson   = requests.get(GEOJSON_URL, timeout=15).json()
 
-    features = []
-    for f in geojson["features"]:
-        code = f["properties"]["code"]
-        name = f["properties"]["name"]
-        if code[:2] not in SIDO_CODE or name in EXCLUDE:
-            continue
-        features.append({
-            "type": "Feature",
-            "properties": {
-                "name":      name,
-                "sido":      SIDO_CODE[code[:2]],
-                "highlight": "고양시" if "고양" in name else "기타",
-            },
-            "geometry": f["geometry"],
-        })
-    return {"type": "FeatureCollection", "features": features}
+#     features = []
+#     for f in geojson["features"]:
+#         code = f["properties"]["code"]
+#         name = f["properties"]["name"]
+#         if code[:2] not in SIDO_CODE or name in EXCLUDE:
+#             continue
+#         features.append({
+#             "type": "Feature",
+#             "properties": {
+#                 "name":      name,
+#                 "sido":      SIDO_CODE[code[:2]],
+#                 "highlight": "고양시" if "고양" in name else "기타",
+#             },
+#             "geometry": f["geometry"],
+#         })
+#     return {"type": "FeatureCollection", "features": features}
 
-
-def make_map(fc: dict) -> alt.Chart:
-    # InlineData + format=json 으로 Altair에 GeoJSON을 직접 전달 (Arrow 변환 우회)
-    data = alt.InlineData(
-        values=fc,
-        format=alt.DataFormat(property="features", type="json"),
-    )
-    return (
-        alt.Chart(data)
-        .mark_geoshape(stroke="white", strokeWidth=0.6)
-        .encode(
-            color=alt.Color(
-                "properties.highlight:N",
-                scale=alt.Scale(
-                    domain=["고양시", "기타"],
-                    range=["#F78535", "#D9EFEE"],
-                ),
-                legend=None,
-            ),
-            tooltip=[
-                alt.Tooltip("properties.name:N", title="지역"),
-                alt.Tooltip("properties.sido:N", title="시도"),
-            ],
-        )
-        .project("mercator")
-        .properties(height=300, title="수도권 — 고양시 위치")
-        .configure_view(stroke=None)
-        .configure_title(fontSize=13, color="#555")
-    )
+## 지도부분 일단 hide (6/30)
+# def make_map(fc: dict) -> alt.Chart:
+#     # InlineData + format=json 으로 Altair에 GeoJSON을 직접 전달 (Arrow 변환 우회)
+#     data = alt.InlineData(
+#         values=fc,
+#         format=alt.DataFormat(property="features", type="json"),
+#     )
+#     return (
+#         alt.Chart(data)
+#         .mark_geoshape(stroke="white", strokeWidth=0.6)
+#         .encode(
+#             color=alt.Color(
+#                 "properties.highlight:N",
+#                 scale=alt.Scale(
+#                     domain=["고양시", "기타"],
+#                     range=["#F78535", "#D9EFEE"],
+#                 ),
+#                 legend=None,
+#             ),
+#             tooltip=[
+#                 alt.Tooltip("properties.name:N", title="지역"),
+#                 alt.Tooltip("properties.sido:N", title="시도"),
+#             ],
+#         )
+#         .project("mercator")
+#         .properties(height=300, title="수도권 — 고양시 위치")
+#         .configure_view(stroke=None)
+#         .configure_title(fontSize=13, color="#555")
+#     )
 
 
 # ── HTML 테이블 ─────────────────────────────────
@@ -188,14 +188,15 @@ view = view[view["경기일자"].isin(selected_dates)]
 if selected_venues:
     view = view[view["std_name"].isin(selected_venues)]
 
+## 지도부분 일단 hide (6/30)
 # ── 지도 (테이블 상단) ──────────────────────────
-try:
-    fc = load_sudogwon_fc()
-    st.altair_chart(make_map(fc), width="stretch")
-except Exception as e:
-    st.warning(f"지도 로딩 실패: {e}")
+# try:
+#     fc = load_sudogwon_fc()
+#     st.altair_chart(make_map(fc), width="stretch")
+# except Exception as e:
+#     st.warning(f"지도 로딩 실패: {e}")
 
-st.divider()
+# st.divider()
 
 # ── 게시글 테이블 ───────────────────────────────
 st.caption(f"전체 {len(df)}개 중 고양시 {len(df_goyang)}개 · {len(view)}개 표시 중")
