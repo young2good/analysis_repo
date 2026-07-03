@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 
-POSTS_JSON = Path(__file__).parent / "posts.json"
+POSTS_JSON = Path(__file__).parent / "posts_temp.json"
 CAFE_URL   = "https://cafe.daum.net/skfootball/IxVG/"
 GEOJSON_URL = (
     "https://raw.githubusercontent.com/southkorea/southkorea-maps"
@@ -148,45 +148,52 @@ with open(POSTS_JSON, encoding="utf-8") as f:
     posts = json.load(f)
 
 df = pd.DataFrame(posts)
-df_goyang = df[df["city"] == "고양시"].copy()
-df_goyang = df_goyang.sort_values("created", ascending=False).reset_index(drop=True)
-df_goyang["경기일자"] = df_goyang["title"].apply(extract_date)
-df_goyang["시간"]     = df_goyang["title"].apply(extract_time)
+df["경기일자"] = df["title"].apply(extract_date)
+df["시간"]     = df["title"].apply(extract_time)
+df = df.sort_values("created", ascending=False).reset_index(drop=True)
+
+df_goyang = df[df["city"] == "고양시"].copy().reset_index(drop=True)
 
 # ── 사이드바 필터 ───────────────────────────────
 with st.sidebar:
     st.header("필터")
 
-    def valid_date(d):
-        if not d or "/" not in str(d):
-            return False
-        try:
-            return int(str(d).split("/")[0]) <= 12
-        except ValueError:
-            return False
+    view_mode = st.radio("보기 모드", ["필터보기", "전체보기"], horizontal=True)
 
-    dates = sorted(
-        [d for d in df_goyang["경기일자"].replace("", None).dropna().unique() if valid_date(d)],
-        key=lambda d: tuple(int(x) for x in d.split("/"))
-    )
+    if view_mode == "필터보기":
+        def valid_date(d):
+            if not d or "/" not in str(d):
+                return False
+            try:
+                return int(str(d).split("/")[0]) <= 12
+            except ValueError:
+                return False
 
-    if len(dates) >= 2:
-        date_range = st.select_slider("날짜 범위", options=dates, value=(dates[0], dates[-1]))
-        start_idx, end_idx = dates.index(date_range[0]), dates.index(date_range[1])
-        selected_dates = set(dates[start_idx:end_idx + 1])
-    else:
-        selected_dates = set(dates)
+        dates = sorted(
+            [d for d in df_goyang["경기일자"].replace("", None).dropna().unique() if valid_date(d)],
+            key=lambda d: tuple(int(x) for x in d.split("/"))
+        )
 
-    st.divider()
+        if len(dates) >= 2:
+            date_range = st.select_slider("날짜 범위", options=dates, value=(dates[0], dates[-1]))
+            start_idx, end_idx = dates.index(date_range[0]), dates.index(date_range[1])
+            selected_dates = set(dates[start_idx:end_idx + 1])
+        else:
+            selected_dates = set(dates)
 
-    venues = sorted(df_goyang["std_name"].dropna().unique().tolist())
-    selected_venues = st.pills("장소 선택", options=venues, selection_mode="multi", default=venues)
+        st.divider()
+
+        venues = sorted(df_goyang["std_name"].dropna().unique().tolist())
+        selected_venues = st.pills("장소 선택", options=venues, selection_mode="multi", default=venues)
 
 # ── 필터 적용 ───────────────────────────────────
-view = df_goyang.copy()
-view = view[view["경기일자"].isin(selected_dates)]
-if selected_venues:
-    view = view[view["std_name"].isin(selected_venues)]
+if view_mode == "전체보기":
+    view = df.copy()
+else:
+    view = df_goyang.copy()
+    view = view[view["경기일자"].isin(selected_dates)]
+    if selected_venues:
+        view = view[view["std_name"].isin(selected_venues)]
 
 ## 지도부분 일단 hide (6/30)
 # ── 지도 (테이블 상단) ──────────────────────────
@@ -199,5 +206,8 @@ if selected_venues:
 # st.divider()
 
 # ── 게시글 테이블 ───────────────────────────────
-st.caption(f"전체 {len(df)}개 중 고양시 {len(df_goyang)}개 · {len(view)}개 표시 중")
+if view_mode == "전체보기":
+    st.caption(f"전체 {len(df)}개 표시 중 (필터 없음)")
+else:
+    st.caption(f"전체 {len(df)}개 중 고양시 {len(df_goyang)}개 · {len(view)}개 표시 중")
 st.markdown(build_html_table(view), unsafe_allow_html=True)

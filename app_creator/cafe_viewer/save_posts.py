@@ -22,8 +22,13 @@ HEADERS = {
     "Referer": f"https://cafe.daum.net/skfootball/{FLDID}",
 }
 
-VENUES_XLSX = r"e:\git-younghyun\analysis_repo\app_creator\venues_final.xlsx"
+VENUES_XLSX = r"e:\git-younghyun\analysis_repo\app_creator\venue_dimension\venues_final.xlsx"
 OUTPUT_JSON = r"e:\git-younghyun\analysis_repo\app_creator\posts.json"
+
+# 크롤링 조건 (필요시 여기만 수정)
+DATE_FROM = "2026-06-15"
+DATE_TO   = "2026-06-30"
+MAX_PAGES = 15
 
 VENUE_CITY = {
     "YMCA 축구장":                              "고양시",
@@ -115,7 +120,7 @@ def _get_page(page_num, prev_page, first_depth, last_depth):
     )
 
 
-def collect_posts(max_pages=15, date_from="2026-05-01", date_to="2026-05-31"):
+def collect_posts(max_pages=MAX_PAGES, date_from=DATE_FROM, date_to=DATE_TO):
     from_dt = datetime.strptime(date_from, "%Y-%m-%d")
     to_dt   = datetime.strptime(date_to,   "%Y-%m-%d")
 
@@ -211,7 +216,7 @@ def apply_mapping(posts):
 
 
 if __name__ == "__main__":
-    posts = collect_posts(max_pages=15, date_from="2026-05-01", date_to="2026-05-31")
+    posts = collect_posts()
     posts = apply_mapping(posts)
 
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
