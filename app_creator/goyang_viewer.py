@@ -141,8 +141,8 @@ def build_html_table(df: pd.DataFrame) -> str:
 
 
 # ── UI ─────────────────────────────────────────
-st.set_page_config(page_title="고양시 게시글", layout="wide")
-st.title("고양시 게시글 목록")
+st.set_page_config(page_title="게시글 뷰어", layout="wide")
+st.title("게시글 목록")
 
 with open(POSTS_JSON, encoding="utf-8") as f:
     posts = json.load(f)
@@ -152,15 +152,77 @@ df["경기일자"] = df["title"].apply(extract_date)
 df["시간"]     = df["title"].apply(extract_time)
 df = df.sort_values("created", ascending=False).reset_index(drop=True)
 
-df_goyang = df[df["city"] == "고양시"].copy().reset_index(drop=True)
+NO_CITY = "(도시 미지정)"
+
+
+def city_mask(frame: pd.DataFrame, selected: list) -> pd.Series:
+    mask = frame["city"].isin(selected)
+    if NO_CITY in selected:
+        mask |= frame["city"].isna() | (frame["city"] == "")
+    return mask
+
 
 # ── 사이드바 필터 ───────────────────────────────
+selected_dates = None
+selected_venues = None
+df_complete = None
+
 with st.sidebar:
     st.header("필터")
 
-    view_mode = st.radio("보기 모드", ["필터보기", "전체보기"], horizontal=True)
+    # dimension 1: 보기 구분
+    st.subheader("보기 구분")
+    view_mode = st.radio(
+        "보기 구분",
+        ["필터보기", "전체보기"],
+        horizontal=True,
+        label_visibility="collapsed",
+        help="필터보기: 날짜·시간·장소가 모두 입력된 게시글만 표시",
+    )
 
     if view_mode == "필터보기":
+        include_no_date  = st.checkbox("날짜 미완성인 것 보기", value=False)
+        include_no_time  = st.checkbox("시간 미완성인 것 보기", value=False)
+        include_no_place = st.checkbox("장소 미완성인 것 보기", value=False)
+
+    st.divider()
+
+    # dimension 2: 지역 필터
+    st.subheader("지역 필터")
+    cities = sorted(df["city"].dropna().unique().tolist())
+    if (df["city"].isna() | (df["city"] == "")).any():
+        cities.append(NO_CITY)
+    default_cities = ["고양시"] if "고양시" in cities else cities[:1]
+    selected_cities = st.pills(
+        "도시 선택",
+        options=cities,
+        selection_mode="multi",
+        default=default_cities,
+    )
+
+    # 필터보기 전용 상세 필터
+    if view_mode == "필터보기":
+        st.divider()
+        st.subheader("상세 필터")
+
+        df_base = (
+            df[city_mask(df, selected_cities)].copy()
+            if selected_cities
+            else pd.DataFrame(columns=df.columns)
+        )
+        has_date  = df_base["경기일자"].astype(str).str.strip() != ""
+        has_time  = df_base["시간"].astype(str).str.strip() != ""
+        has_place = df_base["std_name"].notna() & (df_base["std_name"].astype(str).str.strip() != "")
+
+        cond = pd.Series(True, index=df_base.index)
+        if not include_no_date:
+            cond &= has_date
+        if not include_no_time:
+            cond &= has_time
+        if not include_no_place:
+            cond &= has_place
+        df_complete = df_base[cond].copy().reset_index(drop=True)
+
         def valid_date(d):
             if not d or "/" not in str(d):
                 return False
@@ -170,30 +232,45 @@ with st.sidebar:
                 return False
 
         dates = sorted(
-            [d for d in df_goyang["경기일자"].replace("", None).dropna().unique() if valid_date(d)],
+            [d for d in df_complete["경기일자"].unique() if valid_date(d)],
             key=lambda d: tuple(int(x) for x in d.split("/"))
         )
 
         if len(dates) >= 2:
             date_range = st.select_slider("날짜 범위", options=dates, value=(dates[0], dates[-1]))
-            start_idx, end_idx = dates.index(date_range[0]), dates.index(date_range[1])
+            start_idx = dates.index(date_range[0])
+            end_idx = dates.index(date_range[1])
             selected_dates = set(dates[start_idx:end_idx + 1])
-        else:
+        elif len(dates) == 1:
             selected_dates = set(dates)
+        else:
+            selected_dates = set()
+            if df_complete.empty:
+                st.warning("조건에 맞는 게시글이 없습니다.")
 
         st.divider()
 
-        venues = sorted(df_goyang["std_name"].dropna().unique().tolist())
-        selected_venues = st.pills("장소 선택", options=venues, selection_mode="multi", default=venues)
+        venues = sorted(df_complete["std_name"].dropna().unique().tolist())
+        if venues:
+            selected_venues = st.pills("장소 선택", options=venues, selection_mode="multi", default=venues)
+        else:
+            selected_venues = []
 
 # ── 필터 적용 ───────────────────────────────────
-if view_mode == "전체보기":
-    view = df.copy()
-else:
-    view = df_goyang.copy()
-    view = view[view["경기일자"].isin(selected_dates)]
+if not selected_cities:
+    view = pd.DataFrame(columns=df.columns)
+elif view_mode == "전체보기":
+    view = df[city_mask(df, selected_cities)].copy()
+else:  # 필터보기
+    view = df_complete.copy()
+    if selected_dates:
+        # 날짜 미완성 포함 시, 날짜 없는 행은 범위 필터에서 제외하지 않고 유지
+        no_date = view["경기일자"].astype(str).str.strip() == ""
+        view = view[view["경기일자"].isin(selected_dates) | no_date]
     if selected_venues:
-        view = view[view["std_name"].isin(selected_venues)]
+        # 장소 미완성 포함 시, 장소 없는 행은 장소 필터에서 제외하지 않고 유지
+        no_place = view["std_name"].isna() | (view["std_name"].astype(str).str.strip() == "")
+        view = view[view["std_name"].isin(selected_venues) | no_place]
 
 ## 지도부분 일단 hide (6/30)
 # ── 지도 (테이블 상단) ──────────────────────────
@@ -206,8 +283,10 @@ else:
 # st.divider()
 
 # ── 게시글 테이블 ───────────────────────────────
+city_label = "·".join(selected_cities) if selected_cities else "없음"
 if view_mode == "전체보기":
-    st.caption(f"전체 {len(df)}개 표시 중 (필터 없음)")
+    st.caption(f"[{city_label}] 전체 {len(view)}개 표시 중")
 else:
-    st.caption(f"전체 {len(df)}개 중 고양시 {len(df_goyang)}개 · {len(view)}개 표시 중")
+    total_complete = len(df_complete) if df_complete is not None else 0
+    st.caption(f"[{city_label}] 조건 충족 {total_complete}개 중 · {len(view)}개 표시 중")
 st.markdown(build_html_table(view), unsafe_allow_html=True)

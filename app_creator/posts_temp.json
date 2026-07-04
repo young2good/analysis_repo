@@ -1,1018 +1,130 @@
 [
   {
-    "dataid": "58984",
+    "dataid": "59000",
+    "title": "일요일 운정 조기축구 회원모집",
+    "created": "2026-07-03",
+    "venue_candidate": "운정 조기축구 회원",
+    "std_name": null,
+    "city": null
+  },
+  {
+    "dataid": "58999",
+    "title": "07/26(일) 오전 6-8시 고양 농협대학교운동장 매치팀 모십니다~!!",
+    "created": "2026-07-03",
+    "venue_candidate": "고양 농협대학교운동장 매치 모십니다",
+    "std_name": "농협대학교운동장",
+    "city": "고양시"
+  },
+  {
+    "dataid": "58998",
+    "title": "[무료초청] 7월5일(일) 구리 왕숙체육공원 21-23시 무료 초청합니다.",
+    "created": "2026-07-03",
+    "venue_candidate": "구리 왕숙체육공원 무료",
+    "std_name": "구리왕숙체육공원 축구장",
+    "city": "구리시"
+  },
+  {
+    "dataid": "58997",
+    "title": "7/11 토 08-10 항공대학교 초청합니다(7/25 교환)",
+    "created": "2026-07-03",
+    "venue_candidate": "토 항공대학교 교환",
+    "std_name": "한국항공대학교운동장",
+    "city": "고양시"
+  },
+  {
+    "dataid": "58996",
+    "title": "7월 19일 초청합니다!",
+    "created": "2026-07-03",
+    "venue_candidate": null,
+    "std_name": null,
+    "city": null
+  },
+  {
+    "dataid": "58995",
     "title": "7.19.(일)/7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-30",
+    "created": "2026-07-02",
     "venue_candidate": "진건푸른물센터축구장 구리남양주",
     "std_name": "진건푸른물센터인조잔디구장",
     "city": "남양주시"
   },
   {
-    "dataid": "58982",
-    "title": "★ 7월 5일 / 12일 / 19일 / 26일 13-15시 매치 초청합니다!",
-    "created": "2026-06-30",
+    "dataid": "58994",
+    "title": "2026.07.04/(토)/21:00-23:00 구리왕숙체육공원 축구장",
+    "created": "2026-07-02",
+    "venue_candidate": "토 구리왕숙체육공원 축구장",
+    "std_name": "구리왕숙체육공원 축구장",
+    "city": "구리시"
+  },
+  {
+    "dataid": "58993",
+    "title": "[무료초청] 7월 5일 일요일 20시 천마근린공원",
+    "created": "2026-07-02",
+    "venue_candidate": "천마근린공원",
+    "std_name": null,
+    "city": null
+  },
+  {
+    "dataid": "58992",
+    "title": "7/5 일 오후 18-20시 걸포중앙공원축구장 매칭구합니다~",
+    "created": "2026-07-02",
+    "venue_candidate": "걸포중앙공원축구장",
+    "std_name": null,
+    "city": null
+  },
+  {
+    "dataid": "58991",
+    "title": "7월 11,18,25일 (토) 월산 구장 오전 7시-11시(시간 조절 가능) 초청합니다",
+    "created": "2026-07-02",
+    "venue_candidate": "토 월산 구장 시간 조절 가능",
+    "std_name": null,
+    "city": null
+  },
+  {
+    "dataid": "58990",
+    "title": "★ 7월 5일 / 12일 / 19일 / 26일 - 13 ~ 15시 매치 초청합니다!",
+    "created": "2026-07-02",
     "venue_candidate": "매치",
     "std_name": null,
     "city": null
   },
   {
-    "dataid": "58981",
-    "title": "7월 3일 금요일 고양시 야간경기 초청해주세요!",
-    "created": "2026-06-30",
-    "venue_candidate": "고양시 야간 해주세요",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58980",
+    "dataid": "58989",
     "title": "7월 26일 일요일 18-20 감일구장 초청합니다!!",
-    "created": "2026-06-30",
+    "created": "2026-07-01",
     "venue_candidate": "감일구장",
     "std_name": null,
     "city": null
   },
   {
-    "dataid": "58979",
+    "dataid": "58988",
     "title": "7월 25일 토요일 하남보조구장 오전경기 초청합니다",
-    "created": "2026-06-30",
+    "created": "2026-07-01",
     "venue_candidate": "하남보조구장",
     "std_name": "하남종합운동장보조경기장",
     "city": "하남시"
   },
   {
-    "dataid": "58978",
-    "title": "남양주와부공설운동장 7/5일 19시 초청합니다",
-    "created": "2026-06-30",
-    "venue_candidate": "남양주와부공설운동장",
-    "std_name": "와부공설운동장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58977",
-    "title": "7월 4일 오전 8시~10시 녹양보조축구장 초청합니다~ 마감",
-    "created": "2026-06-30",
-    "venue_candidate": "녹양보조축구장 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58976",
-    "title": "7/5 일요일 오전 10-12시 남양주 별내 구리 다산 중랑 시간 협의 가능 (마감)",
-    "created": "2026-06-30",
-    "venue_candidate": "남양주 별내 구리 다산 중랑 시간 협의 가능 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58975",
-    "title": "중랑 P&D입니다. 7월 저녁 일요일 주말 매치 구합니다",
-    "created": "2026-06-30",
-    "venue_candidate": "중랑 P D 저녁 매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58974",
-    "title": "7/5 일 오후 18-20시 걸포중앙공원축구장 매칭구합니다~",
-    "created": "2026-06-29",
-    "venue_candidate": "걸포중앙공원축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58973",
-    "title": "7/4 토 오전 남양주 체육문화센터 초청",
-    "created": "2026-06-29",
-    "venue_candidate": "토 남양주 체육문화센터",
-    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58971",
-    "title": "7월 각 주 상대팀 모십니다~",
-    "created": "2026-06-29",
-    "venue_candidate": "각 주 모십니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58970",
-    "title": "7월 26일 일요일 12시~14시 하남 보조B구장 초청합니다.",
-    "created": "2026-06-29",
-    "venue_candidate": "하남 보조B구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58969",
-    "title": "7월 5일(일) 20시~22시 남양주체육문화센터 B구장 11VS11 초청합니다~!!!!!!!",
-    "created": "2026-06-29",
-    "venue_candidate": "남양주체육문화센터 B구장 VS",
-    "std_name": "남양주체육문화센터(종합운동장)축구장 B구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58968",
-    "title": "7월 토요일 하남보조구장 오전경기 초청합니다",
-    "created": "2026-06-29",
-    "venue_candidate": "하남보조구장",
-    "std_name": "하남종합운동장보조경기장",
-    "city": "하남시"
-  },
-  {
-    "dataid": "58967",
-    "title": "7월 19일 초청합니다!",
-    "created": "2026-06-29",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58966",
-    "title": "★ 7월 5일 / 12일 / 19일 / 26일 (일) 13-15시 매치 초청합니다!",
-    "created": "2026-06-29",
+    "dataid": "58987",
+    "title": "*7월 5일 / 12일 / 19일 / 26일 13-15시 매치 초청합니다.",
+    "created": "2026-07-01",
     "venue_candidate": "매치",
     "std_name": null,
     "city": null
   },
   {
-    "dataid": "58965",
-    "title": "7월 4일 토요일 15시~17시 상암월드컵경기장 보조운동장",
-    "created": "2026-06-29",
-    "venue_candidate": "상암월드컵장 보조운동장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58964",
-    "title": "7/11 토 08-10 항공대학교 초청합니다(7월25일 교환)",
-    "created": "2026-06-29",
-    "venue_candidate": "토 항공대학교 교환",
-    "std_name": "한국항공대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58963",
-    "title": "7월 11일(토) 오전 06-08 다산체육공원 초청합니다",
-    "created": "2026-06-29",
-    "venue_candidate": "토 다산체육공원",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58962",
-    "title": "(마감)7/4 토 08-10 항공대학교 초청합니다(7월교환)",
-    "created": "2026-06-29",
-    "venue_candidate": "마감 토 항공대학교 교환",
-    "std_name": "한국항공대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58960",
-    "title": "매주 일요일 20시 농협대학교 매치초청",
-    "created": "2026-06-28",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58959",
-    "title": "매주 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-28",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58958",
-    "title": "7.19.(일)/7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-28",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58957",
-    "title": "[완료]7월4일(토) 오전7시~10시",
-    "created": "2026-06-28",
-    "venue_candidate": "완료 토",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58955",
-    "title": "2026년 07월04일(토) 지금푸른물센터 08:00~10:00 11대11 축구 매칭 구합니다.",
-    "created": "2026-06-28",
-    "venue_candidate": "년 토 지금푸른물센터 대 축구",
-    "std_name": "지금푸른물센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58954",
-    "title": "7/5 일요일 오전 10-12시 남양주 별내 구리 다산 중랑 시간 협의 가능",
-    "created": "2026-06-28",
-    "venue_candidate": "남양주 별내 구리 다산 중랑 시간 협의 가능",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58953",
-    "title": "7월달 5,12,26 일요일 21-23시 매치 구합니다",
-    "created": "2026-06-28",
-    "venue_candidate": "매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58952",
-    "title": "7월 5일 일요일 21-23시 구리타워 축구장",
-    "created": "2026-06-28",
-    "venue_candidate": "구리타워 축구장",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58951",
-    "title": "7월5일 일요일 오전06시 초청합니다",
-    "created": "2026-06-28",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58949",
-    "title": "★ 7월 5일 / 12일 / 19일 / 26일 수도공고 13-15시 매치 초청합니다!",
-    "created": "2026-06-28",
-    "venue_candidate": "수도공고 매치",
-    "std_name": "수도전기공업고등학교축구장",
-    "city": "서울특별시"
-  },
-  {
-    "dataid": "58948",
-    "title": "7월 토요일 하남보조구장 오전경기 초청합니다",
-    "created": "2026-06-28",
-    "venue_candidate": "하남보조구장",
-    "std_name": "하남종합운동장보조경기장",
-    "city": "하남시"
-  },
-  {
-    "dataid": "58947",
-    "title": "*초청합니다* 7월 5일/12일/19일/26일 13-15시 수도공고 매치 초청합니다.",
-    "created": "2026-06-26",
-    "venue_candidate": "수도공고 매치",
-    "std_name": "수도전기공업고등학교축구장",
-    "city": "서울특별시"
-  },
-  {
-    "dataid": "58945",
-    "title": "7.18일 오전 6-9토요일 구리타워 초청합니다",
-    "created": "2026-06-26",
-    "venue_candidate": "구리타워",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58944",
-    "title": "내일 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-26",
-    "venue_candidate": "내일 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58943",
-    "title": "6월28일(일) 13:00-15:00 축구 초청합니다 덕소고",
-    "created": "2026-06-26",
-    "venue_candidate": "축구 덕소고",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58942",
-    "title": "6월27일(토) 무료초청합니다.",
-    "created": "2026-06-26",
-    "venue_candidate": "토",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58938",
-    "title": "7월 2일 목요일 20시~22시 목요일 남양주 종합C구장 초청합니다",
-    "created": "2026-06-26",
-    "venue_candidate": "남양주 종합C구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58937",
-    "title": "☆ 7월 일요일 매치 초청드립니다! (수도공고 / 13-15시)",
-    "created": "2026-06-26",
-    "venue_candidate": "요일 매치 드립니다 수도공고",
-    "std_name": "수도전기공업고등학교축구장",
-    "city": "서울특별시"
-  },
-  {
-    "dataid": "58936",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-26",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58935",
-    "title": "중랑 P&D입니다. 7월 저녁 일요일 주말 매치 구합니다.",
-    "created": "2026-06-26",
-    "venue_candidate": "중랑 P D 저녁 매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58934",
-    "title": "6월28일 일 오전7시~10시 파주 월롱체육공원 초대",
-    "created": "2026-06-26",
-    "venue_candidate": "파주 월롱체육공원 초대",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58933",
-    "title": "26.06.27(토) 새벽 06-08 의정부 경민대 운동장 11:11 매치 무료 초청",
-    "created": "2026-06-25",
-    "venue_candidate": "토 새벽 의정부 경민대 운동장 매치 무료",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58932",
-    "title": "이번주 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-25",
-    "venue_candidate": "이번주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58931",
-    "title": "6월 28일(일) 오후 6-8시 남양주 C (1달전 새잔디로 교체)",
-    "created": "2026-06-25",
-    "venue_candidate": "남양주 C 달전 새잔디로 교체",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58930",
-    "title": "완",
-    "created": "2026-06-25",
-    "venue_candidate": "완",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58929",
-    "title": "6/27 토 07~10시 중산체육공원 (마감)",
-    "created": "2026-06-25",
-    "venue_candidate": "토 중산체육공원 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58928",
-    "title": "7월 5일,12일,26일 일요일 21-23시 구리타워 축구장 매치 구합니다",
-    "created": "2026-06-25",
-    "venue_candidate": "구리타워 축구장 매치",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58927",
-    "title": "28일 하남주경기장 10시~12시",
-    "created": "2026-06-25",
-    "venue_candidate": "하남주장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58926",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-25",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58925",
-    "title": "28일일요일오후하남종합운동장초청합니다",
-    "created": "2026-06-25",
-    "venue_candidate": "하남종합운동장",
-    "std_name": "하남종합운동장 주경기장",
-    "city": "하남시"
-  },
-  {
-    "dataid": "58924",
-    "title": "6.28(일)/ 7.5.(일)/7.12(일)/7.19.(일)/7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-25",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58923",
-    "title": "2026년 06월27일(토) 지금푸른물센터 08:00~10:00 11대11 축구 매칭 구합니다.",
-    "created": "2026-06-24",
-    "venue_candidate": "년 토 지금푸른물센터 대 축구",
-    "std_name": "지금푸른물센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58921",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58919",
-    "title": "6/27(토) 오전9시 축구 덕소고 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "토 축구 덕소고",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58918",
-    "title": "6/27 토 오전 8시~10시 일산ymca구장",
-    "created": "2026-06-24",
-    "venue_candidate": "토 일산ymca구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58917",
-    "title": "6월 27일 토요일 오후 9-11시 2시간 중랑구립운동장 초청합니다.",
-    "created": "2026-06-24",
+    "dataid": "58986",
+    "title": "7월 4일 토요일 오후 9-11시 2시간 중랑구립운동장 초청합니다.",
+    "created": "2026-07-01",
     "venue_candidate": "간 중랑구립운동장",
     "std_name": "중랑구립잔디운동장",
     "city": "서울특별시"
   },
   {
-    "dataid": "58916",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58915",
-    "title": "남양주와부공설운동장 6/28일 19시 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "남양주와부공설운동장",
-    "std_name": "와부공설운동장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58914",
-    "title": "일요일 대게임 무료초청",
-    "created": "2026-06-24",
-    "venue_candidate": "대게임",
+    "dataid": "58985",
+    "title": "금주 일요일 7.5 오후4~7시 고양시 충장 근린체육공원 매치 팀 구해요",
+    "created": "2026-07-01",
+    "venue_candidate": "금주 고양시 충장 근린체육공원 매치 구해요",
     "std_name": null,
     "city": null
-  },
-  {
-    "dataid": "58913",
-    "title": "[무료초청] 6월28일(일) 구리 왕숙체육공원 21-23시 초청합니다.",
-    "created": "2026-06-24",
-    "venue_candidate": "구리 왕숙체육공원",
-    "std_name": "구리왕숙체육공원 축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58912",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58911",
-    "title": "☆ 6월 28일 (일) 13-15시 매치 초청합니다! ☆",
-    "created": "2026-06-24",
-    "venue_candidate": "매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58910",
-    "title": "급급초청합니다 2026년 06월 28일 보광동 오산고등학교 정식구장 일요일 오전 07시00분~11시 30분",
-    "created": "2026-06-24",
-    "venue_candidate": "급급 년 보광동 오산고등학교 정식구장 분 분",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58909",
-    "title": "6/27 (토) 일산 중산체육공원 07~10시 (마감)",
-    "created": "2026-06-24",
-    "venue_candidate": "토 일산 중산체육공원 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58908",
-    "title": "7월 일요일 오후경기 하남보조구장, 감일구장 초청합니다!!",
-    "created": "2026-06-24",
-    "venue_candidate": "요일 하남보조구장 감일구장",
-    "std_name": "하남종합운동장보조경기장",
-    "city": "하남시"
-  },
-  {
-    "dataid": "58907",
-    "title": "7월 토요일 하남보조구장 오전경기 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "하남보조구장",
-    "std_name": "하남종합운동장보조경기장",
-    "city": "하남시"
-  },
-  {
-    "dataid": "58906",
-    "title": "재밌고 즐겁게 차고 싶습니다!",
-    "created": "2026-06-24",
-    "venue_candidate": "재밌고 즐겁게 차고 싶습니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58905",
-    "title": "[매칭완료] 7/19 일 오후 18-20시 걸포중앙공원축구장 매칭구합니다~",
-    "created": "2026-06-24",
-    "venue_candidate": "완료 걸포중앙공원축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58904",
-    "title": "7/5 일 오후 18-20시 걸포중앙공원축구장 매칭구합니다~",
-    "created": "2026-06-24",
-    "venue_candidate": "걸포중앙공원축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58902",
-    "title": "7월 매주 일요일 다산체육공원축구장 20시~22시 초청합니다",
-    "created": "2026-06-24",
-    "venue_candidate": "매주 다산체육공원축구장",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58901",
-    "title": "7월19일 일요일 오전10시 남양주체육문화센터 A구장 초청합니다 (26일 교환경기우선)",
-    "created": "2026-06-24",
-    "venue_candidate": "남양주체육문화센터 A구장 교환우선",
-    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58899",
-    "title": "이번주 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-24",
-    "venue_candidate": "이번주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58897",
-    "title": "의정부 직동구장 6월 27일 토 오전 8시-10시 초청합니다",
-    "created": "2026-06-23",
-    "venue_candidate": "의정부 직동구장 토",
-    "std_name": "직동근린공원축구장",
-    "city": "의정부시"
-  },
-  {
-    "dataid": "58896",
-    "title": "7월 매주 일요일 저녁 20-22시 남양주체육문화센터 C구장 초청합니다",
-    "created": "2026-06-23",
-    "venue_candidate": "매주 저녁 남양주체육문화센터 C구장",
-    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58895",
-    "title": "7월 2~4째주 토요일 오전 6-8시 경기 초청 부탁드립니다.",
-    "created": "2026-06-23",
-    "venue_candidate": "째주 부탁드립니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58893",
-    "title": "매월2째주 토요일에 함께 운동할 팀 찾고 있습니다. -가온fc-",
-    "created": "2026-06-23",
-    "venue_candidate": "매월째주 에 함께 운동할 찾고 있습니다 가온fc",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58892",
-    "title": "6.28(일)/ 7.5.(일)/7.12(일)/7.19.(일)/7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-23",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58891",
-    "title": "6/27 고양YMCA 오전 7-10시 고양 YMCA 양도 (마감)",
-    "created": "2026-06-23",
-    "venue_candidate": "고양YMCA 고양 YMCA 양도 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58890",
-    "title": "6/27일 오전 6-9토요일 상대팀 있음 양도합니다",
-    "created": "2026-06-22",
-    "venue_candidate": "있음 양도",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58889",
-    "title": "6월 28일 일요일 12-14시 남양주 별내체육공원 축구장 초청합니다",
-    "created": "2026-06-22",
-    "venue_candidate": "남양주 별내체육공원 축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58887",
-    "title": "이번주 상대팀 구합니다~^^(완료)",
-    "created": "2026-06-22",
-    "venue_candidate": "이번주 완료",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58886",
-    "title": "7월 19일 일요일 12시~14시 하남 보조B구장 초청합니다.",
-    "created": "2026-06-22",
-    "venue_candidate": "하남 보조B구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58884",
-    "title": "[남양주] 27일(토) 남양주 먹골구장 19:00~21:00 매칭구합니다 ~ (매칭완료)",
-    "created": "2026-06-22",
-    "venue_candidate": "남양주 토 남양주 먹골구장 완료",
-    "std_name": "먹골구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58883",
-    "title": "6월27일 토 원능수질복원센터 9시~12시 초청합니다",
-    "created": "2026-06-22",
-    "venue_candidate": "토 원능수질복원센터",
-    "std_name": "원능수질복원센터",
-    "city": "파주시"
-  },
-  {
-    "dataid": "58880",
-    "title": "매주 일요일 20시 농협대학교 매치초청",
-    "created": "2026-06-21",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58879",
-    "title": "매주 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-21",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58878",
-    "title": "6.28(일)/ 7.5.(일)/7.12(일)/7.19.(일)/7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-21",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58877",
-    "title": "6월28일(일) 11~14시 고양고등학교 초청합니다!!",
-    "created": "2026-06-21",
-    "venue_candidate": "고양고등학교",
-    "std_name": "고양고등학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58875",
-    "title": "매칭 신청 AFL을 통해 진행해보세요!",
-    "created": "2026-06-19",
-    "venue_candidate": "AFL을 통해 진행해보세요",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58874",
-    "title": "6월 28일 일요일 오전 하남 감일구장 초청드립니다",
-    "created": "2026-06-19",
-    "venue_candidate": "하남 감일구장 드립니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58873",
-    "title": "남양주 진접 경복대학교 운동장 7월 5일, 7월 12일(일요일) 08~11시 매치팀 구합니다.",
-    "created": "2026-06-19",
-    "venue_candidate": "남양주 진접 경복대학교 운동장 매치",
-    "std_name": "경복대학교 남양주캠퍼스운동장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58872",
-    "title": "6월 20일 오전8시-10시 살곶이1구장 무료초청",
-    "created": "2026-06-19",
-    "venue_candidate": "살곶이",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58871",
-    "title": "[무료초청] 6월 21일(일) 구리왕숙체육공원 21-23시 초청합니다.",
-    "created": "2026-06-19",
-    "venue_candidate": "구리왕숙체육공원",
-    "std_name": "구리왕숙체육공원 축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58870",
-    "title": "6월 27일 토요일 관악구민운동장 14~16시 매치 초청!!",
-    "created": "2026-06-19",
-    "venue_candidate": "관악구민운동장 매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58869",
-    "title": "(무료초청) 6/20(토) 오후 16시~18시 불암산스타디움 축구장",
-    "created": "2026-06-19",
-    "venue_candidate": "토 불암산스타디움 축구장",
-    "std_name": "불암산스포츠타운축구장",
-    "city": "서울특별시"
-  },
-  {
-    "dataid": "58868",
-    "title": "7월4일(토) 21-23시 , 7월11일(토)21-23시 남양주 에코랜드축구장",
-    "created": "2026-06-18",
-    "venue_candidate": "토 토 남양주 에코랜드축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58866",
-    "title": "6월 21일 일요일 경기 무료초청합니다",
-    "created": "2026-06-18",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58863",
-    "title": "6월 20일 토요일 오후 9-11시 2시간 중랑구립운동장 초청합니다.",
-    "created": "2026-06-18",
-    "venue_candidate": "간 중랑구립운동장",
-    "std_name": "중랑구립잔디운동장",
-    "city": "서울특별시"
-  },
-  {
-    "dataid": "58861",
-    "title": "6월 27일 토요일 10-12시 다산체육공원 초청합니다",
-    "created": "2026-06-18",
-    "venue_candidate": "다산체육공원",
-    "std_name": "다산체육공원 축구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58860",
-    "title": "6월20일 토요일 오전 7-10시 파주스타디움 보조구장 무료 초청드립니다!",
-    "created": "2026-06-18",
-    "venue_candidate": "파주스타디움 보조구장 무료 드립니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58859",
-    "title": "6/20일 20-22시",
-    "created": "2026-06-18",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58858",
-    "title": "7.4(토) 오전 7-10시 운정체육공원 초대합니다",
-    "created": "2026-06-18",
-    "venue_candidate": "토 운정체육공원 초대",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58856",
-    "title": "6월 28일 일요일 오전 06-08시 하남 감일구장 초청드립니다",
-    "created": "2026-06-18",
-    "venue_candidate": "하남 감일구장 드립니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58855",
-    "title": "매주 일요일 20시 농협대학교 매치초청",
-    "created": "2026-06-18",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58851",
-    "title": "매주 토요일 22시 농협대학교 매치초청",
-    "created": "2026-06-17",
-    "venue_candidate": "매주 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58850",
-    "title": "(마감)[남양주] 6. 20. 토요일 아침 06-08 일패근린공원 축구장 매치 초청합니다.",
-    "created": "2026-06-17",
-    "venue_candidate": "마감 남양주 아침 일패근린공원 축구장 매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58847",
-    "title": "[●초청합니다] 6월 20일 토요일 오전 10시~오후 1시 고양시 충장구장 11:11",
-    "created": "2026-06-16",
-    "venue_candidate": "고양시 충장구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58846",
-    "title": "6월28일 축구 초청 부탁드립니다!!",
-    "created": "2026-06-16",
-    "venue_candidate": "축구 부탁드립니다",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58845",
-    "title": "6.20일 토요일 6-9 구리타워 초청합니다",
-    "created": "2026-06-16",
-    "venue_candidate": "구리타워",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58844",
-    "title": "[남양주] 6월 27일 / 토요일 / 19:00~21:00 / 먹골구장 매칭구합니다 ~",
-    "created": "2026-06-16",
-    "venue_candidate": "남양주 먹골구장",
-    "std_name": "먹골구장",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58843",
-    "title": "6/20 토 08-10 항공대학교 초청합니다(7월교환)",
-    "created": "2026-06-16",
-    "venue_candidate": "토 항공대학교 교환",
-    "std_name": "한국항공대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58842",
-    "title": "(구장양도)6월21일 일요일 16ㅡ18시 수락산스포츠타운(노원구)양도합니다.(상대x)",
-    "created": "2026-06-16",
-    "venue_candidate": "구장양도 ㅡ 수락산스포츠타운 노원구 양도 x",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58840",
-    "title": "6/20 토 7-10시 고양 지영체육공원",
-    "created": "2026-06-16",
-    "venue_candidate": "토 고양 지영체육공원",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58838",
-    "title": "6월 20일 경기 초청 드립니다.(마감)",
-    "created": "2026-06-16",
-    "venue_candidate": "드립니다 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58837",
-    "title": "6/21(일) 오전6:00-8:30 국민대학교(마감)",
-    "created": "2026-06-15",
-    "venue_candidate": "국민대학교 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58836",
-    "title": "6/20일 토요일 6-9 구리타워 초청합다",
-    "created": "2026-06-15",
-    "venue_candidate": "구리타워 합다",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58835",
-    "title": "6/20토 저녁",
-    "created": "2026-06-15",
-    "venue_candidate": "토 저녁",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58834",
-    "title": "6월 21일(일) 20시-22시 남양주체육문화센터 C구장 11vs11 초청합니다!!!!!",
-    "created": "2026-06-15",
-    "venue_candidate": "남양주체육문화센터 C구장 vs",
-    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
-    "city": "남양주시"
-  },
-  {
-    "dataid": "58833",
-    "title": "6월 28일 일요일 구리타워 21-23시",
-    "created": "2026-06-15",
-    "venue_candidate": "구리타워",
-    "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
-  },
-  {
-    "dataid": "58831",
-    "title": "6월21일(일) 11~14시 고양고등학교 초청합니다!!",
-    "created": "2026-06-15",
-    "venue_candidate": "고양고등학교",
-    "std_name": "고양고등학교운동장",
-    "city": "고양시"
-  },
-  {
-    "dataid": "58830",
-    "title": "6월21일(일) 06-08 남양주체육센터 상대 구합니다.(마감)",
-    "created": "2026-06-15",
-    "venue_candidate": "남양주체육센터 마감",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58828",
-    "title": "6월 20일(토) 오전 7시 30분 - 11시 초청합니다.(시간 조율 가능)&#8203;",
-    "created": "2026-06-15",
-    "venue_candidate": "토 분 시간 조율 가능",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58827",
-    "title": "21일 일 06-08시 신내차량기지 축구장 초청합니다.",
-    "created": "2026-06-15",
-    "venue_candidate": "신내차량기지 축구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58826",
-    "title": "6월20일 토요일 07~10 매치 구합니다 (완료)",
-    "created": "2026-06-15",
-    "venue_candidate": "매치 완료",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58825",
-    "title": "6월20일 오전 7-10시 파주스타디움 보조구장 매칭 구합니다.",
-    "created": "2026-06-15",
-    "venue_candidate": "파주스타디움 보조구장",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "dataid": "58823",
-    "title": "[매칭완료] 6.21(일)/6.28(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-06-15",
-    "venue_candidate": "완료 진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
   }
 ]

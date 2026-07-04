@@ -7,6 +7,7 @@ import json
 import time
 import requests
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 
@@ -22,12 +23,14 @@ HEADERS = {
     "Referer": f"https://cafe.daum.net/skfootball/{FLDID}",
 }
 
-VENUES_XLSX = r"e:\git-younghyun\analysis_repo\app_creator\venue_dimension\venues_final.xlsx"
-OUTPUT_JSON = r"e:\git-younghyun\analysis_repo\app_creator\posts.json"
+# 스크립트 위치 기준 상대 경로 (analysis_repo가 어디에 있든 동작)
+APP_CREATOR_DIR = Path(__file__).resolve().parent.parent
+VENUES_XLSX = APP_CREATOR_DIR / "venue_dimension" / "venues_final.xlsx"
+OUTPUT_JSON = APP_CREATOR_DIR / "posts_temp.json"
 
 # 크롤링 조건 (필요시 여기만 수정)
-DATE_FROM = "2026-06-15"
-DATE_TO   = "2026-06-30"
+DATE_FROM = "2026-07-01"
+DATE_TO   = "2026-07-30"
 MAX_PAGES = 15
 
 VENUE_CITY = {
