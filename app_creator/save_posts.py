@@ -8,20 +8,20 @@ import json
 from pathlib import Path
 
 from crawlers import daum_cafe
-# from crawlers import naver_cafe   # Step 2에서 구현 후 CRAWLERS에 추가
+from crawlers import naver_cafe
 
 from venue_mapping import apply_mapping
 
 OUTPUT_JSON = Path(__file__).resolve().parent / "posts_temp.json"
 
 # 크롤링 조건 (필요시 여기만 수정)
-DATE_FROM = "2026-07-01"
+DATE_FROM = "2026-07-10"
 DATE_TO   = "2026-07-30"
 MAX_PAGES = 15
 
 CRAWLERS = [
     daum_cafe,
-    # naver_cafe,
+    naver_cafe,
 ]
 
 

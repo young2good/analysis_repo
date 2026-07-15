@@ -1,6 +1,8 @@
-"""
-다음 카페 게시글을 크롤링해서 JSON 파일로 저장하는 일회성 스크립트.
-python save_posts.py
+"""[DEPRECATED] 다음 카페 게시글을 크롤링해서 JSON 파일로 저장하던 일회성 스크립트.
+
+posts_temp.json 생성은 app_creator/save_posts.py 하나로 일원화되었다.
+(크롤러: crawlers/daum_cafe.py, 장소 매핑: venue_mapping.py)
+이 파일은 실행하지 말 것 — 같은 경로에 JSON을 중복 생성한다.
 """
 import re
 import json
@@ -219,6 +221,10 @@ def apply_mapping(posts):
 
 
 if __name__ == "__main__":
+    raise SystemExit(
+        "[DEPRECATED] 이 스크립트는 더 이상 사용하지 않습니다. "
+        "app_creator/save_posts.py 를 실행하세요."
+    )
     posts = collect_posts()
     posts = apply_mapping(posts)
 

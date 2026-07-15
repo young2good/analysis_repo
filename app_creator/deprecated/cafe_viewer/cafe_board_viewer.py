@@ -1,3 +1,9 @@
+"""[DEPRECATED] 실시간 크롤링 내장형 Streamlit 게시판 뷰어.
+
+크롤링·장소 매핑 로직이 crawlers/daum_cafe.py, venue_mapping.py로 분리되면서
+이 파일의 복제 로직은 더 이상 유지되지 않는다. 뷰어는 goyang_viewer.py를 사용할 것.
+(VENUES_XLSX 하드코딩 경로도 현재 환경에서는 유효하지 않음)
+"""
 import re
 import json
 import time
