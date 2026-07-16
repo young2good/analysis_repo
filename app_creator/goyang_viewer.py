@@ -7,7 +7,6 @@ import streamlit as st
 from pathlib import Path
 
 POSTS_JSON = Path(__file__).parent / "posts_temp.json"
-CAFE_URL   = "https://cafe.daum.net/skfootball/IxVG/"
 GEOJSON_URL = (
     "https://raw.githubusercontent.com/southkorea/southkorea-maps"
     "/master/kostat/2013/json/skorea_municipalities_geo_simple.json"
@@ -108,7 +107,7 @@ def extract_time(title: str) -> str:
 def build_html_table(df: pd.DataFrame) -> str:
     rows = ""
     for _, r in df.iterrows():
-        url   = CAFE_URL + str(r["dataid"])
+        url   = r["url"]
         title = r["title"].replace("<", "&lt;").replace(">", "&gt;")
         rows += f"""
         <tr>
@@ -116,6 +115,7 @@ def build_html_table(df: pd.DataFrame) -> str:
           <td style="white-space:nowrap">{r['경기일자']}</td>
           <td style="white-space:nowrap">{r['시간']}</td>
           <td>{r['std_name'] or ''}</td>
+          <td style="white-space:nowrap">{r['source']}</td>
         </tr>"""
 
     return f"""
@@ -134,7 +134,7 @@ def build_html_table(df: pd.DataFrame) -> str:
     </style>
     <table class="post-table">
       <thead><tr>
-        <th>원제목</th><th>날짜</th><th>시간</th><th>장소</th>
+        <th>원제목</th><th>날짜</th><th>시간</th><th>장소</th><th>출처</th>
       </tr></thead>
       <tbody>{rows}</tbody>
     </table>"""
