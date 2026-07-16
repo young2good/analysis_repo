@@ -1,13 +1,227 @@
 [
   {
     "source": "daum_cafe",
+    "dataid": "59088",
+    "title": "7월17일(금) 19시-21시 구리왕숙체육공원 초청드립니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59088",
+    "venue_candidate": "금 구리왕숙체육공원 드립니다",
+    "std_name": "구리왕숙체육공원 축구장",
+    "city": "구리시",
+    "match_date": "7/17",
+    "match_time": "19~21시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59086",
+    "title": "7월 25일 토요일 하남보조구장 오전경기 초청합니다",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59086",
+    "venue_candidate": "하남보조구장",
+    "std_name": "하남종합운동장보조경기장",
+    "city": "하남시",
+    "match_date": "7/25",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59085",
+    "title": "[남양주] 7월26일(일) 18-20시 남양주체육문화센터 11:11 초청합니다!!",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59085",
+    "venue_candidate": "남양주 남양주체육문화센터",
+    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
+    "city": "남양주시",
+    "match_date": "7/26",
+    "match_time": "18~20시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59084",
+    "title": "[무료초청] 7/18(토) 오후 16시~18시 용마산폭포공원축구장",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59084",
+    "venue_candidate": "토 용마산폭포공원축구장",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "16~18시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59083",
+    "title": "[무료초청]7/18 남양주 체육관 08-10",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59083",
+    "venue_candidate": "남양주 체육관",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "08~10시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59082",
+    "title": "7월17일(금, 제헌절) 06-08 남양주체육센터 상대팀 구합니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59082",
+    "venue_candidate": "금 제헌절 남양주체육센터",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/17",
+    "match_time": "06~08시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59080",
+    "title": "7월17일(금) 제헌절 06-08 남양주체육센터 상대팀 구합니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59080",
+    "venue_candidate": "금 제헌절 남양주체육센터",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/17",
+    "match_time": "06~08시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59079",
+    "title": "7월19일 한팀 무료초청 합니다",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59079",
+    "venue_candidate": "한",
+    "std_name": "둔치축구",
+    "city": "고양시",
+    "match_date": "7/19",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59078",
+    "title": "7월19일 한팀 무료초청 합니다",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59078",
+    "venue_candidate": "한",
+    "std_name": "둔치축구",
+    "city": "고양시",
+    "match_date": "7/19",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59077",
+    "title": "7/19 일요일 남양주 약대울 구장 초청합니다.",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59077",
+    "venue_candidate": "남양주 약대울 구장",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/19",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59075",
+    "title": "18일토요일20시22시하남종합운동장초청합니다",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59075",
+    "venue_candidate": "하남종합운동장",
+    "std_name": "하남종합운동장 주경기장",
+    "city": "하남시",
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59074",
+    "title": "7월 26일 일요일 12시~14시 하남 보조B구장 초청합니다.",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59074",
+    "venue_candidate": "하남 보조B구장",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/26",
+    "match_time": "12~14시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59072",
+    "title": "남양주와부공설운동장 7/19일 19시 초청합니다",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59072",
+    "venue_candidate": "남양주와부공설운동장",
+    "std_name": "와부공설운동장",
+    "city": "남양주시",
+    "match_date": "7/19",
+    "match_time": "19시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59071",
+    "title": "7월 18일 (토) 월산 구장 오전 7시-10시 (2파전 or 3파전 가능)",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59071",
+    "venue_candidate": "토 월산 구장 파전 or 파전 가능",
+    "std_name": null,
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "7~10시",
+    "intent": "기타",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
+    "dataid": "59070",
+    "title": "7/18 토 남양주 체육문화센터 08-10",
+    "created": "2026-07-15",
+    "url": "https://cafe.daum.net/skfootball/IxVG/59070",
+    "venue_candidate": "토 남양주 체육문화센터",
+    "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
+    "city": "남양주시",
+    "match_date": "7/18",
+    "match_time": "08~10시",
+    "intent": "기타",
+    "is_closed": false
+  },
+  {
+    "source": "daum_cafe",
     "dataid": "59069",
-    "title": "7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
+    "title": "[마감]7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
     "created": "2026-07-14",
     "url": "https://cafe.daum.net/skfootball/IxVG/59069",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
+    "venue_candidate": "마감 진건푸른물센터축구장 구리남양주",
     "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
+    "city": "남양주시",
+    "match_date": "7/26",
+    "match_time": "17~19시",
+    "intent": "기타",
+    "is_closed": true
   },
   {
     "source": "daum_cafe",
@@ -17,7 +231,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59068",
     "venue_candidate": "구리타워축구장",
     "std_name": "구리시민스포츠센터축구장",
-    "city": "구리시"
+    "city": "구리시",
+    "match_date": "07/18",
+    "match_time": "21~23시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -27,7 +245,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59066",
     "venue_candidate": "이번주 저녁 양도",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "7시",
+    "intent": "양도",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -37,7 +259,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59065",
     "venue_candidate": "토 남양주 체육문화센터",
     "std_name": "남양주체육문화센터(종합운동장)메인스타디움",
-    "city": "남양주시"
+    "city": "남양주시",
+    "match_date": "7/18",
+    "match_time": "08~10시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -47,7 +273,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59064",
     "venue_candidate": "하남종합운동장",
     "std_name": "하남종합운동장 주경기장",
-    "city": "하남시"
+    "city": "하남시",
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -57,7 +287,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59063",
     "venue_candidate": "남양주 별내 구리 다산 중랑 시간 협의 가능",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/26",
+    "match_time": "오전10~12시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -67,7 +301,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59061",
     "venue_candidate": "농협대학교 운동장 매치 모십니다",
     "std_name": "농협대학교운동장",
-    "city": "고양시"
+    "city": "고양시",
+    "match_date": "",
+    "match_time": "오전6~8시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -77,7 +315,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59060",
     "venue_candidate": "토 고양시 원능수질복원센터 서울근교",
     "std_name": "원능수질복원센터",
-    "city": "파주시"
+    "city": "파주시",
+    "match_date": "7/25",
+    "match_time": "6~9시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -87,7 +329,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59059",
     "venue_candidate": null,
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/19",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -97,7 +343,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59058",
     "venue_candidate": "김포걸포공원",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "10시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -107,7 +357,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59057",
     "venue_candidate": "하남 보조B구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/26",
+    "match_time": "12~14시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -117,7 +371,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59056",
     "venue_candidate": "감일구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/26",
+    "match_time": "18~20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -127,7 +385,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59055",
     "venue_candidate": "하남보조구장",
     "std_name": "하남종합운동장보조경기장",
-    "city": "하남시"
+    "city": "하남시",
+    "match_date": "7/25",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -137,7 +399,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59054",
     "venue_candidate": "고양고등학교",
     "std_name": "고양고등학교운동장",
-    "city": "고양시"
+    "city": "고양시",
+    "match_date": "7/19",
+    "match_time": "11~14시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -147,7 +413,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59053",
     "venue_candidate": "토 지영체육공원",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "7~10시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -157,7 +427,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59051",
     "venue_candidate": "매주 농협대학교",
     "std_name": "농협대학교운동장",
-    "city": "고양시"
+    "city": "고양시",
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -167,7 +441,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59050",
     "venue_candidate": "매주 농협대학교",
     "std_name": "농협대학교운동장",
-    "city": "고양시"
+    "city": "고양시",
+    "match_date": "",
+    "match_time": "22시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "daum_cafe",
@@ -177,7 +455,11 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59049",
     "venue_candidate": "마감완료",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": true
   },
   {
     "source": "daum_cafe",
@@ -187,107 +469,95 @@
     "url": "https://cafe.daum.net/skfootball/IxVG/59048",
     "venue_candidate": "남양주 크낙새구장 지금부터 까지 차실",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "1시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
-    "source": "daum_cafe",
-    "dataid": "59047",
-    "title": "2026.07.18/(토)/21:00-23:00 구리왕숙체육공원 축구장",
-    "created": "2026-07-11",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59047",
-    "venue_candidate": "토 구리왕숙체육공원 축구장",
-    "std_name": "구리왕숙체육공원 축구장",
-    "city": "구리시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59046",
-    "title": "오늘 토요일 22시 농협대학교 매치초청",
-    "created": "2026-07-11",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59046",
-    "venue_candidate": "오늘 농협대학교",
-    "std_name": "농협대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59045",
-    "title": "7.26.(일) 17시-19시, 진건푸른물센터축구장(구리남양주)",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59045",
-    "venue_candidate": "진건푸른물센터축구장 구리남양주",
-    "std_name": "진건푸른물센터인조잔디구장",
-    "city": "남양주시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59044",
-    "title": "(완료)7/18(토) 오전6시 별내택지체육공원 초대합니다.",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59044",
-    "venue_candidate": "완료 토 별내택지체육공원 초대",
+    "source": "naver_cafe",
+    "dataid": "2539499",
+    "title": "내일 금요일 20시 고양시 매치초청",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2539499",
+    "venue_candidate": "내일 고양시",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
-    "source": "daum_cafe",
-    "dataid": "59043",
-    "title": "7/19 일요일 오후 16-22시 남양주 별내 구리 다산 광진구 언제 어디든 가능합니다....!!!!",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59043",
-    "venue_candidate": "남양주 별내 구리 다산 광진구 언제 어디든 가능",
+    "source": "naver_cafe",
+    "dataid": "2539223",
+    "title": "7월 19(일) 운정체육공원 19시반 ~ 22시 매칭구합니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2539223",
+    "venue_candidate": "운정체육공원 반",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/19",
+    "match_time": "19시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
-    "source": "daum_cafe",
-    "dataid": "59041",
-    "title": "☆ 7월 12일 (일) 13-15시 수도공고 매치 초청합니다!",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59041",
-    "venue_candidate": "수도공고 매치",
-    "std_name": "수도전기공업고등학교축구장",
-    "city": "서울특별시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59040",
-    "title": "7/12일요일 오전6~8 도봉 다락원체육공원 초청합니다",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59040",
-    "venue_candidate": "요일 도봉 다락원체육공원",
-    "std_name": "다락원체육공원축구장",
-    "city": "의정부시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59039",
-    "title": "(무료초청) 7/12 일요일 오후 4시 용마 초청합니다",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59039",
-    "venue_candidate": "용마",
-    "std_name": "용마폭포공원축구장",
-    "city": "서울특별시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59038",
-    "title": "☆ 7월 12일 (일) 13-15시 수도공고 매치 초청합니다!",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59038",
-    "venue_candidate": "수도공고 매치",
-    "std_name": "수도전기공업고등학교축구장",
-    "city": "서울특별시"
-  },
-  {
-    "source": "daum_cafe",
-    "dataid": "59037",
-    "title": "7/12 매칭 초청합니다 (20-22)",
-    "created": "2026-07-10",
-    "url": "https://cafe.daum.net/skfootball/IxVG/59037",
-    "venue_candidate": null,
+    "source": "naver_cafe",
+    "dataid": "2539086",
+    "title": "급구) 7월18일 오전 7-10시 파주스타디움 보조구장 상대팀 구합니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2539086",
+    "venue_candidate": "급구 파주스타디움 보조구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "오전7~10시",
+    "intent": "상대구함",
+    "is_closed": false
+  },
+  {
+    "source": "naver_cafe",
+    "dataid": "2539022",
+    "title": "고양대자)매칭완료) 16일 오늘 20시 무료 초청 합니다~",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2539022",
+    "venue_candidate": "고양대자 완료 오늘 무료",
+    "std_name": null,
+    "city": null,
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": true
+  },
+  {
+    "source": "naver_cafe",
+    "dataid": "2538983",
+    "title": "[8월 매칭] 8월 평일 야간 경기 매칭 미리 잡으려고 합니다.",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538983",
+    "venue_candidate": "평일 야간 미리 잡으려고",
+    "std_name": null,
+    "city": null,
+    "match_date": "8월",
+    "match_time": "",
+    "intent": "기타",
+    "is_closed": false
+  },
+  {
+    "source": "naver_cafe",
+    "dataid": "2538858",
+    "title": "이번주 금요일 20시 고양시 매치초청",
+    "created": "2026-07-16",
+    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538858",
+    "venue_candidate": "이번주 고양시",
+    "std_name": null,
+    "city": null,
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -297,7 +567,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538708",
     "venue_candidate": "고양 파주 금 토 매치",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/17",
+    "match_time": "19~22시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -307,7 +581,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538557",
     "venue_candidate": "고양동운동장 초대드립니다",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "20~22시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -317,7 +595,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538319",
     "venue_candidate": "토 고양시 원능수질복원센터 서울근교",
     "std_name": "원능수질복원센터",
-    "city": "파주시"
+    "city": "파주시",
+    "match_date": "7/25",
+    "match_time": "6~9시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -327,7 +609,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538108",
     "venue_candidate": "토 종로 한강 다목적구장 축구",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "26/7",
+    "match_time": "08~12시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -337,7 +623,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538107",
     "venue_candidate": "토 종로 한강 다목적구장 축구",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "26/7",
+    "match_time": "10~13시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -347,7 +637,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2538058",
     "venue_candidate": "토 파주 운정건강공원",
     "std_name": "운정건강공원(가온) 인조잔디축구장",
-    "city": "파주시"
+    "city": "파주시",
+    "match_date": "25/7",
+    "match_time": "07:00~10:00",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -357,7 +651,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2537655",
     "venue_candidate": "교하체육공원 토 아침",
     "std_name": "교하체육공원 인조잔디축구장",
-    "city": "파주시"
+    "city": "파주시",
+    "match_date": "7/18",
+    "match_time": "7시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -367,7 +665,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2537382",
     "venue_candidate": "목 지영 구함",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/23",
+    "match_time": "8~11시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -377,7 +679,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2537207",
     "venue_candidate": "금일 별무리구장 혹시 간정도 하실있는지 여쭙니다",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "1시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -387,7 +693,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2537043",
     "venue_candidate": null,
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "19~22시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -397,7 +707,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536993",
     "venue_candidate": "김포걸포공원",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "10시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -407,7 +721,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536912",
     "venue_candidate": "금 완료",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/17",
+    "match_time": "19~22시",
+    "intent": "기타",
+    "is_closed": true
   },
   {
     "source": "naver_cafe",
@@ -417,7 +735,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536905",
     "venue_candidate": "토 파주스타디움 보조구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "26/7",
+    "match_time": "7~10시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -427,7 +749,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536901",
     "venue_candidate": "고양고등학교",
     "std_name": "고양고등학교운동장",
-    "city": "고양시"
+    "city": "고양시",
+    "match_date": "7/19",
+    "match_time": "11~14시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -437,7 +763,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536868",
     "venue_candidate": "파주 운정 토 파주스타디움 보조구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -447,7 +777,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536858",
     "venue_candidate": "토 지영체육공원",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/18",
+    "match_time": "7~10시",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -457,7 +791,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536810",
     "venue_candidate": "매주 고양시",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -467,7 +805,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536809",
     "venue_candidate": "매주 고양시",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "22시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -477,7 +819,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536808",
     "venue_candidate": "매주 고양시",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "20시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -487,7 +833,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536804",
     "venue_candidate": "토 파주스타디움 보조구장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "26/7",
+    "match_time": "7~10시",
+    "intent": "상대구함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -497,7 +847,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536777",
     "venue_candidate": "부탁드립니다",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "",
+    "match_time": "",
+    "intent": "초청원함",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -507,7 +861,11 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536559",
     "venue_candidate": "고양동운동장",
     "std_name": null,
-    "city": null
+    "city": null,
+    "match_date": "7/19",
+    "match_time": "19:00~22:00",
+    "intent": "기타",
+    "is_closed": false
   },
   {
     "source": "naver_cafe",
@@ -517,56 +875,10 @@
     "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536555",
     "venue_candidate": "금 항공대",
     "std_name": "한국항공대학교운동장",
-    "city": "고양시"
-  },
-  {
-    "source": "naver_cafe",
-    "dataid": "2536423",
-    "title": "오늘 토요일 22시 고양시 매치초청",
-    "created": "2026-07-11",
-    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536423",
-    "venue_candidate": "오늘 고양시",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "source": "naver_cafe",
-    "dataid": "2536171",
-    "title": "7/12 매칭 초청합니다 ",
-    "created": "2026-07-11",
-    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2536171",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
-  },
-  {
-    "source": "naver_cafe",
-    "dataid": "2535649",
-    "title": "7월 14일 화요일 매치 구합니다 20:00~22:00",
-    "created": "2026-07-10",
-    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2535649",
-    "venue_candidate": "매치",
-    "std_name": null,
-    "city": null
-  },
-  {
-    "source": "naver_cafe",
-    "dataid": "2535473",
-    "title": "[김포] 7월11일(토)  김포종합운동장 매치 초청합니. (18:00 ~ 20:00)",
-    "created": "2026-07-10",
-    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2535473",
-    "venue_candidate": "김포 토 김포종합운동장 매치 합니",
-    "std_name": "김포시종합운동장",
-    "city": "김포시"
-  },
-  {
-    "source": "naver_cafe",
-    "dataid": "2535417",
-    "title": "7/12 매칭 초청합니다 20-22",
-    "created": "2026-07-10",
-    "url": "https://cafe.naver.com/f-e/cafes/11367414/articles/2535417",
-    "venue_candidate": null,
-    "std_name": null,
-    "city": null
+    "city": "고양시",
+    "match_date": "7/17",
+    "match_time": "20~22시",
+    "intent": "기타",
+    "is_closed": false
   }
 ]

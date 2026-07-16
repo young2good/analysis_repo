@@ -1,6 +1,6 @@
-"""게시글 제목에서 장소를 추출해 표준 장소명·도시로 매핑하는 공용 모듈.
+"""게시글 제목에서 장소를 추출해 표준 장소명·도시로 매핑하는 모듈.
 
-save_posts.py(배치)와 대시보드(실시간 수집)가 함께 사용한다.
+parse_posts.py 파이프라인에서 사용한다.
 표준 장소명 사전은 venue_dimension/venues_final.xlsx에서 읽는다.
 """
 import re
@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pandas as pd
 
-VENUES_XLSX = Path(__file__).resolve().parent / "venue_dimension" / "venues_final.xlsx"
+VENUES_XLSX = Path(__file__).resolve().parent.parent / "venue_dimension" / "venues_final.xlsx"
 
 # 표준 장소명 → 도시
 VENUE_CITY = {
