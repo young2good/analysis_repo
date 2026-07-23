@@ -7,7 +7,7 @@ import json
 import os
 import subprocess
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import requests
@@ -21,6 +21,158 @@ GEOJSON_URL = (
     "https://raw.githubusercontent.com/southkorea/southkorea-maps"
     "/master/kostat/2013/json/skorea_municipalities_geo_simple.json"
 )
+
+# 카테고리(글 구분) 태그에 순서대로 배정하는 고정 색상 슬롯 (최대 8개, 이후는 마지막 슬롯 재사용)
+CATEGORICAL_SLOTS = 8
+
+
+def parse_match_date(md, created) -> date | None:
+    """'M/D' 문자열을 게시일(created) 연도 기준 date로 변환. 실패 시 None."""
+    try:
+        m, d = str(md).split("/")
+        return date(int(str(created)[:4]), int(m), int(d))
+    except (ValueError, AttributeError):
+        return None
+
+
+def intent_badge_class(intent: str, ordered_intents: list) -> str:
+    idx = ordered_intents.index(intent) if intent in ordered_intents else CATEGORICAL_SLOTS - 1
+    return f"badge-cat-{idx % CATEGORICAL_SLOTS + 1}"
+
+
+APP_CSS = """
+<style>
+:root {
+  --surface-1:      #ffffff;
+  --page-plane:     #f4f6f5;
+  --text-primary:   #101c14;
+  --text-secondary: #46554b;
+  --text-muted:     #84928a;
+  --border:         rgba(16,40,24,0.12);
+  --pitch:          #1baf7a;   /* 피치 그린 */
+  --pitch-deep:     #0e8a5e;
+  --pitch-soft:     rgba(27,175,122,0.12);
+  --hero-bg-1:      #0d1f16;
+  --hero-bg-2:      #143528;
+  --hero-text:      #f2fbf6;
+  --cat-1: #1baf7a; --cat-2: #2a78d6; --cat-3: #eb6834; --cat-4: #eda100;
+  --cat-5: #e87ba4; --cat-6: #4a3aa7; --cat-7: #008300; --cat-8: #e34948;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-1:      #16211b;
+    --page-plane:     #0c120e;
+    --text-primary:   #edf7f1;
+    --text-secondary: #b3c4ba;
+    --text-muted:     #84928a;
+    --border:         rgba(220,255,235,0.12);
+    --pitch:          #22c98d;
+    --pitch-deep:     #1baf7a;
+    --pitch-soft:     rgba(34,201,141,0.14);
+    --hero-bg-1:      #0a1810;
+    --hero-bg-2:      #10281d;
+    --hero-text:      #f2fbf6;
+    --cat-1: #199e70; --cat-2: #3987e5; --cat-3: #d95926; --cat-4: #c98500;
+    --cat-5: #d55181; --cat-6: #9085e9; --cat-7: #008300; --cat-8: #e66767;
+  }
+}
+
+.block-container { padding-top: 2.2rem; max-width: 980px; }
+
+/* ── 히어로 ── */
+.app-hero {
+  background: linear-gradient(120deg, var(--hero-bg-1), var(--hero-bg-2));
+  border-radius: 20px; padding: 24px 28px; margin-bottom: 1.2rem;
+  position: relative; overflow: hidden;
+}
+.app-hero::after {
+  content: "⚽"; position: absolute; right: 18px; bottom: -14px;
+  font-size: 5.2rem; opacity: .12; transform: rotate(-12deg);
+}
+.hero-eyebrow {
+  display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .14em;
+  color: var(--pitch); text-transform: uppercase; margin-bottom: .3rem;
+}
+.hero-title { font-size: 1.6rem; font-weight: 900; color: var(--hero-text); line-height: 1.25; }
+.hero-title .hl { color: var(--pitch); }
+.hero-sub { color: rgba(242,251,246,.72); font-size: .9rem; margin-top: .35rem; }
+
+/* ── KPI 칩 ── */
+.kpi-row { display: flex; gap: 10px; margin: .2rem 0 1.2rem; }
+.kpi-card {
+  flex: 1; display: flex; align-items: baseline; gap: .5rem;
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 16px;
+}
+.kpi-value { font-size: 1.3rem; font-weight: 900; color: var(--pitch-deep); font-variant-numeric: tabular-nums; }
+.kpi-label { font-size: .8rem; font-weight: 600; color: var(--text-secondary); }
+
+/* ── 날짜 그룹 헤더 ── */
+.day-header {
+  display: flex; align-items: center; gap: .55rem;
+  margin: 1.3rem 0 .55rem; font-size: 1.02rem; font-weight: 800; color: var(--text-primary);
+}
+.day-header .day-chip {
+  font-size: .7rem; font-weight: 800; color: #fff; background: var(--pitch);
+  padding: 2px 8px; border-radius: 999px; letter-spacing: .04em;
+}
+.day-header .day-count { font-size: .8rem; font-weight: 600; color: var(--text-muted); }
+
+/* ── 매치 카드 ── */
+.match-list { display: flex; flex-direction: column; gap: 8px; }
+.match-card {
+  display: flex; align-items: stretch; gap: 14px;
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 14px; padding: 12px 16px; text-decoration: none;
+  transition: transform .08s ease, box-shadow .08s ease, border-color .08s ease;
+}
+.match-card:hover {
+  transform: translateY(-1px); box-shadow: 0 5px 14px rgba(14,138,94,.12);
+  border-color: color-mix(in srgb, var(--pitch) 55%, var(--border));
+  text-decoration: none;
+}
+.match-card.closed { opacity: .5; }
+.mc-time {
+  flex: 0 0 84px; display: flex; flex-direction: column; justify-content: center;
+  border-right: 2px solid var(--pitch-soft); padding-right: 12px;
+}
+.mc-time .t { font-size: 1.02rem; font-weight: 900; color: var(--pitch-deep); font-variant-numeric: tabular-nums; }
+.mc-time .t.tbd { color: var(--text-muted); font-size: .86rem; font-weight: 700; }
+.mc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.mc-venue { font-size: .98rem; font-weight: 800; color: var(--text-primary); }
+.mc-venue.tbd { color: var(--text-muted); font-weight: 600; }
+.match-card.closed .mc-venue { text-decoration: line-through; }
+.mc-title {
+  font-size: .8rem; color: var(--text-secondary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.mc-side {
+  display: flex; flex-direction: column; align-items: flex-end; justify-content: center;
+  gap: 5px; flex-shrink: 0;
+}
+.mc-src { font-size: .72rem; color: var(--text-muted); }
+
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 800;
+  padding: 2px 9px; border-radius: 999px; white-space: nowrap;
+}
+.badge-open { background: var(--pitch); color: #fff; }
+.badge-closed { background: var(--page-plane); color: var(--text-muted); border: 1px solid var(--border); }
+.badge-cat-1 { background: color-mix(in srgb, var(--cat-1) 15%, transparent); color: var(--cat-1); }
+.badge-cat-2 { background: color-mix(in srgb, var(--cat-2) 15%, transparent); color: var(--cat-2); }
+.badge-cat-3 { background: color-mix(in srgb, var(--cat-3) 15%, transparent); color: var(--cat-3); }
+.badge-cat-4 { background: color-mix(in srgb, var(--cat-4) 20%, transparent); color: var(--cat-4); }
+.badge-cat-5 { background: color-mix(in srgb, var(--cat-5) 20%, transparent); color: var(--cat-5); }
+.badge-cat-6 { background: color-mix(in srgb, var(--cat-6) 15%, transparent); color: var(--cat-6); }
+.badge-cat-7 { background: color-mix(in srgb, var(--cat-7) 15%, transparent); color: var(--cat-7); }
+.badge-cat-8 { background: color-mix(in srgb, var(--cat-8) 15%, transparent); color: var(--cat-8); }
+
+.empty-note {
+  text-align: center; color: var(--text-muted); padding: 2.2rem 0;
+  background: var(--surface-1); border: 1px dashed var(--border); border-radius: 14px;
+}
+</style>
+"""
 
 ## 지도부분 일단 hide (6/30)
 # ── 지도 ────────────────────────────────────────
@@ -79,49 +231,81 @@ GEOJSON_URL = (
 #     )
 
 
-# ── HTML 테이블 ─────────────────────────────────
-def build_html_table(df: pd.DataFrame) -> str:
-    rows = ""
-    for _, r in df.iterrows():
-        url   = r["url"]
-        title = r["title"].replace("<", "&lt;").replace(">", "&gt;")
-        closed_cls = ' class="closed"' if r.get("is_closed") else ""
-        badge = ' <span class="badge-closed">마감</span>' if r.get("is_closed") else ""
-        rows += f"""
-        <tr{closed_cls}>
-          <td><a href="{url}" target="_blank">{title}</a>{badge}</td>
-          <td style="white-space:nowrap">{r['경기일자']}</td>
-          <td style="white-space:nowrap">{r['시간']}</td>
-          <td>{r['std_name'] or ''}</td>
-          <td style="white-space:nowrap">{r.get('intent') or ''}</td>
-          <td style="white-space:nowrap">{r['source']}</td>
-        </tr>"""
+# ── 매치 카드 리스트 (경기 날짜별 그룹핑) ────────
+WEEKDAY_KO = ["월", "화", "수", "목", "금", "토", "일"]
+
+
+def day_header_label(dt: date | None, today: date) -> str:
+    if dt is None:
+        return "📌 날짜 미정"
+    label = f"{dt.month}월 {dt.day}일 {WEEKDAY_KO[dt.weekday()]}요일"
+    if dt == today:
+        label += ' <span class="day-chip">오늘</span>'
+    elif dt == today + timedelta(days=1):
+        label += ' <span class="day-chip">내일</span>'
+    return label
+
+
+def build_match_card(r: pd.Series, ordered_intents: list) -> str:
+    url    = r["url"]
+    title  = r["title"].replace("<", "&lt;").replace(">", "&gt;")
+    closed = bool(r.get("is_closed"))
+
+    time_txt  = str(r["시간"]).strip()
+    place_txt = str(r["std_name"] or "").strip()
+    time_html  = (
+        f'<span class="t">{time_txt}</span>' if time_txt
+        else '<span class="t tbd">시간 미정</span>'
+    )
+    venue_html = (
+        f'<div class="mc-venue">{place_txt}</div>' if place_txt
+        else '<div class="mc-venue tbd">장소 미정</div>'
+    )
+
+    intent = r.get("intent") or ""
+    badges = (
+        f'<span class="badge {intent_badge_class(intent, ordered_intents)}">{intent}</span>'
+        if intent else ""
+    )
+    badges += (
+        ' <span class="badge badge-closed">마감</span>' if closed
+        else ' <span class="badge badge-open">모집중</span>'
+    )
 
     return f"""
-    <style>
-      .post-table {{ width:100%; border-collapse:collapse; font-size:14px; }}
-      .post-table th {{
-        background:#f4f4f4; text-align:left;
-        padding:8px 12px; border-bottom:2px solid #ddd;
-      }}
-      .post-table td {{
-        padding:7px 12px; border-bottom:1px solid #eee; vertical-align:top;
-      }}
-      .post-table tr:hover td {{ background:#fafafa; }}
-      .post-table a {{ color:#1a73e8; text-decoration:none; }}
-      .post-table a:hover {{ text-decoration:underline; }}
-      .post-table tr.closed td, .post-table tr.closed a {{ color:#aaa; }}
-      .badge-closed {{
-        background:#eee; color:#888; font-size:11px;
-        padding:1px 6px; border-radius:8px; margin-left:4px;
-      }}
-    </style>
-    <table class="post-table">
-      <thead><tr>
-        <th>원제목</th><th>날짜</th><th>시간</th><th>장소</th><th>구분</th><th>출처</th>
-      </tr></thead>
-      <tbody>{rows}</tbody>
-    </table>"""
+    <a class="match-card{' closed' if closed else ''}" href="{url}" target="_blank">
+      <div class="mc-time">{time_html}</div>
+      <div class="mc-body">
+        {venue_html}
+        <div class="mc-title">{title}</div>
+      </div>
+      <div class="mc-side">
+        <div>{badges}</div>
+        <div class="mc-src">{r["source"]}</div>
+      </div>
+    </a>"""
+
+
+def build_match_list(df: pd.DataFrame, ordered_intents: list, today: date) -> str:
+    if df.empty:
+        return '<div class="empty-note">🔍 조건에 맞는 경기가 없어요. 필터를 넓혀보세요!</div>'
+
+    # 경기 날짜 오름차순, 날짜 미정은 마지막 그룹으로
+    df = df.copy()
+    df["_grp"] = df["match_dt"].apply(lambda d: d if isinstance(d, date) else None)
+    df["_ord"] = df["_grp"].apply(lambda d: d if d else date.max)
+    df = df.sort_values(["_ord", "시간"])
+
+    html = ""
+    for grp_dt, grp in df.groupby("_grp", dropna=False, sort=False):
+        grp_dt = grp_dt if isinstance(grp_dt, date) else None
+        cards = "".join(build_match_card(r, ordered_intents) for _, r in grp.iterrows())
+        html += f"""
+        <div class="day-header">{day_header_label(grp_dt, today)}
+          <span class="day-count">{len(grp)}건</span>
+        </div>
+        <div class="match-list">{cards}</div>"""
+    return html
 
 
 # ── 데이터 업데이트 ─────────────────────────────
@@ -141,8 +325,18 @@ def run_script(name: str, *args: str) -> str:
 
 
 # ── UI ─────────────────────────────────────────
-st.set_page_config(page_title="게시글 뷰어", layout="wide")
-st.title("게시글 목록")
+st.set_page_config(page_title="고양 매치", page_icon="⚽", layout="wide")
+st.markdown(APP_CSS, unsafe_allow_html=True)
+st.markdown(
+    """
+    <div class="app-hero">
+      <div class="hero-eyebrow">GOYANG MATCH</div>
+      <div class="hero-title">오늘 뛰고 싶다면,<br><span class="hl">고양 매치</span>에서 찾으세요</div>
+      <div class="hero-sub">고양시 축구 매칭·양도·초청 경기를 한곳에서</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 col_btn, col_from, col_mtime = st.columns([1, 1, 2], vertical_alignment="center")
 with col_btn:
@@ -191,6 +385,8 @@ df = pd.DataFrame(posts)
 df["경기일자"] = df["match_date"]
 df["시간"]     = df["match_time"]
 df = df.sort_values("created", ascending=False).reset_index(drop=True)
+df["match_dt"] = [parse_match_date(md, cr) for md, cr in zip(df["경기일자"], df["created"])]
+all_intents = sorted(df["intent"].dropna().unique().tolist())
 
 NO_CITY = "(도시 미지정)"
 
@@ -229,12 +425,11 @@ with st.sidebar:
 
     # dimension: 글 구분 (의도 분류)
     st.subheader("글 구분")
-    intents = sorted(df["intent"].dropna().unique().tolist())
     selected_intents = st.pills(
         "글 구분",
-        options=intents,
+        options=all_intents,
         selection_mode="multi",
-        default=intents,
+        default=all_intents,
         label_visibility="collapsed",
     )
     exclude_closed = st.checkbox("마감된 글 제외", value=False)
@@ -277,18 +472,7 @@ with st.sidebar:
             cond &= has_place
         df_complete = df_base[cond].copy().reset_index(drop=True)
 
-        def parse_match_date(md, created):
-            """'M/D' 문자열을 게시일(created) 연도 기준 date로 변환. 실패 시 None."""
-            try:
-                m, d = str(md).split("/")
-                return date(int(str(created)[:4]), int(m), int(d))
-            except (ValueError, AttributeError):
-                return None
-
-        match_dts = [
-            parse_match_date(md, cr)
-            for md, cr in zip(df_complete["경기일자"], df_complete["created"])
-        ]
+        match_dts = df_complete["match_dt"].tolist()
         valid_dts = sorted(d for d in match_dts if d)
 
         if valid_dts:
@@ -357,6 +541,35 @@ if view_mode == "필터보기" and not view.empty:
 
 # st.divider()
 
+# ── KPI 요약 ────────────────────────────────────
+week_end = today + timedelta(days=7)
+if not view.empty:
+    is_closed = view["is_closed"].fillna(False).astype(bool)
+    open_count = int((~is_closed).sum())
+    week_count = int(view["match_dt"].apply(lambda d: isinstance(d, date) and today <= d <= week_end).sum())
+else:
+    open_count = week_count = 0
+
+st.markdown(
+    f"""
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <span class="kpi-value">{len(view)}</span>
+        <span class="kpi-label">전체 경기</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value">{open_count}</span>
+        <span class="kpi-label">모집중</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value">{week_count}</span>
+        <span class="kpi-label">이번 주</span>
+      </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
 # ── 게시글 테이블 ───────────────────────────────
 city_label = "·".join(selected_cities) if selected_cities else "없음"
 if view_mode == "전체보기":
@@ -364,4 +577,4 @@ if view_mode == "전체보기":
 else:
     total_complete = len(df_complete) if df_complete is not None else 0
     st.caption(f"[{city_label}] 조건 충족 {total_complete}개 중 · {len(view)}개 표시 중")
-st.markdown(build_html_table(view), unsafe_allow_html=True)
+st.markdown(build_match_list(view, all_intents, today), unsafe_allow_html=True)
